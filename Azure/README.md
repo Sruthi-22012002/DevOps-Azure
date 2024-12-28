@@ -81,8 +81,8 @@ Follow the steps,
 3. Click on accept invitation
 4. Sign into new account
 
-## Connect VM to ssh 
-[Next: Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
+[Next 1: Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
+[Next 2:Connect Vm with Bastion]
 
 
 
