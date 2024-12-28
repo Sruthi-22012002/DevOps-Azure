@@ -82,7 +82,7 @@ Follow the steps,
 4. Sign into new account
 
 [Next 1: Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
-[Next 2:Connect Vm with Bastion]
+[Next 2:Connect Vm with Bastion](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md)
 
 
 
