@@ -81,12 +81,8 @@ Follow the steps,
 3. Click on accept invitation
 4. Sign into new account
 
-## 1.4. Create Tenant
-1. Search Azure active directory
-2. Click Manage tenant
-![image](https://github.com/user-attachments/assets/0debb64b-0950-471d-b41a-1515a0a6b7e6)
-3. Click "create"
-4. 
+## Connect VM to ssh 
+[Next: Connect VM to ssh]
 
 
 
