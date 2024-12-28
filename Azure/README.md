@@ -82,7 +82,7 @@ Follow the steps,
 4. Sign into new account
 
 ## Connect VM to ssh 
-[Next: Connect VM to ssh]
+[Next: Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
 
 
 
