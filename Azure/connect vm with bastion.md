@@ -4,7 +4,8 @@
 > A bastion is a specialized server or resource designed to act as a gateway and provide secure access to a private network from an external network, such as the internet.
 
 ## Architecture Diagram
-![image](https://github.com/user-attachments/assets/1cbcc6c4-fa27-4385-bec1-1032effb4a46)
+![image](https://github.com/user-attachments/assets/5e78b863-6f0b-4eee-ab19-0d020277ccc0)
+
 
 ### Login Azure portal
 ### Create Resource group
