@@ -83,9 +83,9 @@ Follow the steps,
 
 [Next 1: Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
 
-[Next 2:Connect Vm with Bastion](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md)
+[Next 2:Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md)
 
-
+[Next 3:Connect VM with Bastion Service](https://github.com/Sruthi-22012002/DevOps-Azure/tree/main/Azure)
 
 
 
