@@ -81,13 +81,13 @@ Follow the steps above.
 ### Connect with SSH
 * Open terminal
 * Establish a Connection <b>with bastion subnet</b>
-  ```bash
-  shh username@bastionpublicip
- ```
-
+```bash
+ shh username@bastionpublicip
+```
 ![image](https://github.com/user-attachments/assets/008f4b98-733b-4c48-b350-e0ae31f0c981)
 
 * Establish a connect <b>Bastion to Web Tier</b>
+
  ```bash
   shh username@webtierprivateip
  ```
