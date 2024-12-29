@@ -12,9 +12,25 @@
 | 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
 | 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
 
+<b>📌  Draw networking diagram in [draw.io](https://app.diagrams.net) tool</b>
+<h2>Demo page</h2>
 
+![image](https://github.com/user-attachments/assets/ca10bb77-1785-4c0c-9d03-6b488cb0ec21)
 
+## New
+![image](https://github.com/user-attachments/assets/41201d88-3852-4cdf-9a76-8bae88356b5a)
 
+![image](https://github.com/user-attachments/assets/38eedb19-9b27-41d4-8e3f-b5bf551c1514)
+
+![image](https://github.com/user-attachments/assets/dbf7baf6-c682-452c-928c-bd9002e4c806)
+
+## Search the component
+
+![image](https://github.com/user-attachments/assets/06cb33fb-c832-401e-946e-da6385d4cda9)
+
+## Save
+
+![image](https://github.com/user-attachments/assets/b428908c-a1ce-4d50-a6d6-06e609201751)
 
 
 
