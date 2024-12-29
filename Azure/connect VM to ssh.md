@@ -1,7 +1,8 @@
 ![image](https://github.com/user-attachments/assets/7ccb0636-fd6a-43cf-a318-4ecf8733b2fe)<div align = "center"><h1>Connect vm to ssh server</h1></div>
 
 ## Architecture Diagram
-![image](https://github.com/user-attachments/assets/ef357ef9-f7dc-41a7-8ff9-5b38fd13120c)
+![image](https://github.com/user-attachments/assets/471af189-6145-4dca-bff4-ab461786d649)
+
 
 ### Create resource group
 1. Login to the azure account
