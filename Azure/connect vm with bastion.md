@@ -13,37 +13,9 @@ Follow these steps to create Resource group :[Resource Group](https://github.com
 
 ![image](https://github.com/user-attachments/assets/92b02129-84f0-41a4-8dae-8d4ef575203b)
 
-### Create Bastion
-* Search for Bastion
-* Create a new bastion <u>+ Create</u>
-
-![image](https://github.com/user-attachments/assets/c71c0db0-39bb-4a82-b7c1-b2b616800c61)
-
-#### Basics
-##### Project details
-* Choose Resource group
-##### Instance details
-* Enter name
-* Choose Region , default East US
-* Choose Availability zone
-* Choose Tier <b>Basic</b>
-##### Configure virtual networks
-* Create Virtual network as new.
-
-  ![image](https://github.com/user-attachments/assets/ea5e6ceb-c805-4673-a3e6-714e7083efcc)
-
-* Enter Virtual network name
-###### Address space
-* Enter new address
-###### Subnet
-* Enter subnet name as <b>AzureBastionSubnet</b>
-* calculate the subnet in Visual subnet calculator
-📌 Address Range must be /26 or above /26
-* click add
-* Click Review + Create
 ### Create Virtual network
 Follow steps to create Vnet :[Vnet](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
-### Create Vm for Bastion Host subnet
+#### Create Vm for Bastion Host subnet
 > A Virtual Machine (VM) is a software-based emulation of a physical computer. It runs an operating system (OS) and applications just like a physical machine but is completely isolated and operates within a host environment.
 
 * search for virtual machine
@@ -72,6 +44,21 @@ Follow steps to create Vnet :[Vnet](https://github.com/Sruthi-22012002/DevOps-Az
         * Enter key pair name
 #### Networking
 ![image](https://github.com/user-attachments/assets/8618a620-19ed-4fc6-9fac-99484ad29988)
+
+##### Create a virtual networks
+* Create Virtual network as new.
+
+  ![image](https://github.com/user-attachments/assets/ea5e6ceb-c805-4673-a3e6-714e7083efcc)
+
+* Enter Virtual network name
+###### Address space
+* Enter new address
+###### Subnet
+* Enter subnet name as <b>AzureBastionSubnet</b>
+* calculate the subnet in Visual subnet calculator
+📌 Address Range must be /26 or above /26
+* click add
+* Click Review + Create
 
 📌 If you choose you vnet once, it will take the public ip automatically.
 * Finally Review + Create
