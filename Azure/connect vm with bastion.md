@@ -72,15 +72,11 @@ Follow the steps above.
 ```bash
  shh username@bastionpublicip
 ```
-![image](https://github.com/user-attachments/assets/008f4b98-733b-4c48-b350-e0ae31f0c981)
-
 * Establish a connect <b>Bastion to Web Tier</b>
 
  ```bash
   shh username@webtierprivateip
  ```
-
-![image](https://github.com/user-attachments/assets/00cf7180-3d06-446f-b76d-ee54574e46aa)
 
 > <h2>Succesfully connected</h2>
 
