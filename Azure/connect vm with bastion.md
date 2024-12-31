@@ -58,6 +58,9 @@ Follow steps to create Vnet :[Vnet](https://github.com/Sruthi-22012002/DevOps-Az
 * calculate the subnet in Visual subnet calculator
 📌 Address Range must be /26 or above /26
 * click add
+
+![image](https://github.com/user-attachments/assets/d95798c4-83c7-4509-af44-2c8e3aca5520)
+
 * Click Review + Create
 
 📌 If you choose you vnet once, it will take the public ip automatically.
