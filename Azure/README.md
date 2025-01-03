@@ -11,6 +11,7 @@
 | 5. |  [Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md) |
 | 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
 | 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
+| 8. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
 
 <b>📌  Draw networking diagram in [draw.io](https://app.diagrams.net) tool</b>
 <h2>Demo page</h2>
@@ -23,6 +24,11 @@
 ![image](https://github.com/user-attachments/assets/38eedb19-9b27-41d4-8e3f-b5bf551c1514)
 
 ![image](https://github.com/user-attachments/assets/dbf7baf6-c682-452c-928c-bd9002e4c806)
+
+## Page setup
+![image](https://github.com/user-attachments/assets/636e362d-b9cc-4ba9-8d81-0cd5ffddc7d1)
+
+![image](https://github.com/user-attachments/assets/f0bfb9cc-a12a-43b7-a775-35c4631f3120)
 
 ## Search the component
 
