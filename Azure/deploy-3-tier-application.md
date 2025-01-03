@@ -18,6 +18,11 @@
 > To run a 3-tier-application, follow [Run Application](https://github.com/Sruthi-22012002/DevOps-Azure/tree/main/3-tier-application)
 
 Check once if the backend properly stored the data in database.
+![image](https://github.com/user-attachments/assets/e4e51e34-fb9f-4424-a522-0eb0f562a00b)
+
+![image](https://github.com/user-attachments/assets/e86d8539-48e1-47e9-9713-9fc6a7bfa8de)
+
+
 
 
 
