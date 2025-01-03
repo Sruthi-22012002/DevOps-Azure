@@ -1,16 +1,30 @@
 <div align="center"><h2>Deploy 3-tier-application</h2></div>
 
-### Requirements
-1. Create a virtual network for the 3-tier application.
-2. Set up three subnets for the frontend, backend, and database.
-3. Create three virtual machines (VMs), one for each subnet, and configure a Network Security Group (NSG) for each subnet.
-   > Ensure the following access and restrictions:
+### 1. Deploy and Validate Application on a Single Public Machine
+         * Step 1: Install Database, Frontend, and Backend on a Single Instance
+         * Step 2: Run the Application in the Browser
+### 2. Set Up a 3-Tier Application in Azure
+         * Step 1: Create Virtual Network and Subnets
+            * Create Virtual Network (VNet):
+            * Create Subnets:
+               * Frontend Subnet
+               * Backend Subnet
+               * Database Subnet
+         * Step 2: Deploy Virtual Machines (VMs)
+            * Create VMs for each subnet
+            * Configure Network Security Groups (NSGs):
+                  * Frontend NSG : Allow SSH (port 22) access only from the frontend VM to the backend VM.
+                  * Backend NSG  : Allow database communication only from the backend VM (restrict external access).
+                  * Database NSG : Restrict SSH access to the database VM (only allow SSH access from the backend VM).
+                  <b>Ensure no public access to the database.</b>
+### Step 3: Configure Application Communication
+      1.	Restrictions:
+         * Ensure no direct SSH access from the frontend to the database for security reasons.
+         * Public internet access should only be allowed to the frontend VM, which acts as the gateway.
+         * Ensure that the backend and database VMs are isolated from direct internet access for enhanced security.
+### Step 4: Final Verification
+      1.	Test the Application.
 
-        * Frontend: Allow browser access from the public network. The frontend VM will act as the entry point or gateway.
-        * Backend to Database: Restrict access from the public network.
-        * Frontend to Backend: Allow SSH access. 
-        * Backend to Database: Allow SSH access. 
-   <b>Frontend to Database: Do not allow SSH access for security reasons.</b>  
 ### Architecture Diagram
 ![image](https://github.com/user-attachments/assets/ed98a300-6907-4509-acbd-27b02592ad83)
 
