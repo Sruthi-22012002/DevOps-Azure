@@ -90,5 +90,6 @@ flowchart TD
     Testing and Review  :done, a6, 11-27-2024, 11-27-2024
 
   ```
-## Reference
-[Dockerhub](https://hub.docker.com/)
+## Run the application
+* [Setup the backend](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/3-tier-application/react-backend.md)
+* [Run the frontend](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/3-tier-application/run-frontend.md)
