@@ -35,6 +35,9 @@
 |--------------|--------------|
 | Translates private IP addresses from instances in a private subnet to a public IP address, enabling outbound internet connectivity. | Web traffic load balancer work on Application Layer (Layer 7) and route traffic based on source ip address and port to   destionantion ip and port|
 | ![image](https://github.com/user-attachments/assets/1d0901c8-f103-498f-a6bc-adbd2f57c96e) |![image](https://github.com/user-attachments/assets/388865c0-b4f6-4fb7-902a-8ce165e4f6f6) |
+
+![image](https://github.com/user-attachments/assets/4afd2c28-1c0f-4b53-98b1-6de359e9cc7f)
+
 ### Run the application
 > To run a 3-tier-application, follow [Run Application](https://github.com/Sruthi-22012002/DevOps-Azure/tree/main/3-tier-application)
 
