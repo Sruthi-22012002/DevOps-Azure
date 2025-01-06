@@ -26,7 +26,7 @@
       1.	Test the Application.
 
 ### Architecture Diagram
-![image](https://github.com/user-attachments/assets/ed98a300-6907-4509-acbd-27b02592ad83)
+![image](https://github.com/user-attachments/assets/7e58b020-76f1-4af4-b7c0-ba24add303ed)
 
 ### NAT Gateway
 > A NAT Gateway (Network Address Translation Gateway) translates private IP addresses from instances in a private subnet to a public IP address, enabling outbound internet connectivity.
