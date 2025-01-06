@@ -29,7 +29,7 @@
 ![image](https://github.com/user-attachments/assets/ed98a300-6907-4509-acbd-27b02592ad83)
 
 ### NAT Gateway
-> A NAT Gateway (Network Address Translation Gateway) is a service in cloud environments (such as AWS, Azure, or Google Cloud) that allows instances in a private subnet to connect to the internet while preventing inbound internet traffic from directly accessing those instances.
+> A NAT Gateway (Network Address Translation Gateway) translates private IP addresses from instances in a private subnet to a public IP address, enabling outbound internet connectivity.
 ### Run the application
 > To run a 3-tier-application, follow [Run Application](https://github.com/Sruthi-22012002/DevOps-Azure/tree/main/3-tier-application)
 
