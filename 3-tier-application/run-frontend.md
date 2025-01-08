@@ -5,7 +5,7 @@
 ```
 ### Install npm to start the frontend
 ```bash
-npm install
+sudo apt install npm
 ```
 ### Run the application
 ```bash
