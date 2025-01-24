@@ -86,10 +86,24 @@
 |------------|------------|------------|----------|
 | 3306(database)| app-tier vm(private IP)| Db-tier(private IP)|Allow|
 | 3000| db-tier(Private IP)| web-tier(public IP)|<b>DENY</b>|
-Check once if the backend properly stored the data in database.
-![image](https://github.com/user-attachments/assets/e4e51e34-fb9f-4424-a522-0eb0f562a00b)
 
-![image](https://github.com/user-attachments/assets/e86d8539-48e1-47e9-9713-9fc6a7bfa8de)
+### Connect with SSH
+web-tier -> app-tier -> db-tier
+
+```bash
+ssh username@<IP>
+```
+![image](https://github.com/user-attachments/assets/ee8c6df7-8794-42ca-adc0-2946d112245c)
+
+![image](https://github.com/user-attachments/assets/3f9c0e73-00f3-42d9-bb59-b6826bea2370)
+
+![image](https://github.com/user-attachments/assets/eae6877c-da12-49ac-953a-d205a9581518)
+
+### Check the deployment in chrome
+
+```bash
+http://172.174.234.169:3000
+```
 
 
 
