@@ -101,9 +101,8 @@ ssh username@<IP>
 
 ### Check the deployment in chrome
 
-```bash
-http://172.174.234.169:3000
-```
+[http://172.174.234.169:3000/employees](http://172.174.234.169:3000/employees)
+
 
 
 
