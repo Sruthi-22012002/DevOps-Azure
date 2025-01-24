@@ -26,10 +26,7 @@
       1.	Test the Application.
 
 ### Architecture Diagram
-![image](https://github.com/user-attachments/assets/7e58b020-76f1-4af4-b7c0-ba24add303ed)
-
-### NAT Gateway
-> A NAT Gateway (Network Address Translation Gateway) translates private IP addresses from instances in a private subnet to a public IP address, enabling outbound internet connectivity.
+![image](https://github.com/user-attachments/assets/83c172fb-ec46-4c11-97be-1fb9ff64f583)
 
 | NAT Gateway     | Application Gateway     |
 |--------------|--------------|
@@ -38,9 +35,57 @@
 
 ![image](https://github.com/user-attachments/assets/4afd2c28-1c0f-4b53-98b1-6de359e9cc7f)
 
-### Run the application
-> To run a 3-tier-application, follow [Run Application](https://github.com/Sruthi-22012002/DevOps-Azure/tree/main/3-tier-application)
+### 1. Deploy the architecture
+## 1.1 Create a resource group
+> To create a resource group, folloe the following link : [How to create a resource groupt](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
+![image](https://github.com/user-attachments/assets/5a6220ca-be64-41a0-9719-16873931ef9f)
 
+## 1.2 Create a Virtual network
+> Follow this steps : [How to create a vnet](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
+
+![image](https://github.com/user-attachments/assets/d57c5fcd-a4e5-44bf-8c6d-5b0f4303adcc)
+
+### 1.2.1 Create a subnet for each tier
+
+![image](https://github.com/user-attachments/assets/fc98b31b-71b4-4376-a952-ade4dd40f973)
+
+* select subnet
+*  Click <a href="#" style="display: inline-block; padding: 10px 20px; font-size: 14px; color: white; background-color: gray; text-align: center; text-decoration: none; border-radius: 5px;">+ Add Subnet</a>
+* Enter the name and IP
+* Choose the required size of the host
+* Create NSG and select the check box if the VM is private.
+* Click ADD 
+
+![image](https://github.com/user-attachments/assets/f807de86-c21a-4d66-a4b0-2612a45e732e)
+
+### 1.3 Create Virtual machine
+> Follow this steps : [How to create a VM](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md)
+
+<b> 📌As per Spec : App tier VM and databse tier VM should in private network</b>
+## 1.3.1 NSG for web-tier VM
+![image](https://github.com/user-attachments/assets/84ca6377-72e2-4be6-a11c-a9053110b21e)
+
+| port   | source   | Destination  |
+|------------|------------|------------|
+|80(internet)| any| any|
+| 22(SSH)| any| ANY|
+| 3000(frontend page)| any| any|
+
+## 1.3.2 NSG for app-tier VM
+![image](https://github.com/user-attachments/assets/8b641c3a-d479-445b-919c-a27b1831c074)
+
+| Port   | Source   | Destination   |
+|------------|------------|------------|
+| 8080(backend)| app-tier vm(private IP)| Db-tier(private IP)|
+| 22(SSH)| web-tier(Public IP)| app-tier(private IP)|
+
+## 1.3.3 NSG for db-tier VM
+![image](https://github.com/user-attachments/assets/bb642123-4eb6-455a-9832-3b5234e28a4e)
+
+| Port   | Source   | Destination   | Action |
+|------------|------------|------------|----------|
+| 3306(database)| app-tier vm(private IP)| Db-tier(private IP)|Allow|
+| 3000| db-tier(Private IP)| web-tier(public IP)|<b>DENY</b>|
 Check once if the backend properly stored the data in database.
 ![image](https://github.com/user-attachments/assets/e4e51e34-fb9f-4424-a522-0eb0f562a00b)
 
