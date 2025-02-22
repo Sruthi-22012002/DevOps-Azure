@@ -12,6 +12,7 @@
 | 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
 | 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
 | 8. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
+| 9. | [VMSS]()
 
 <b>📌  Draw networking diagram in [draw.io](https://app.diagrams.net) tool</b>
 <h2>Demo page</h2>
