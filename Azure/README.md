@@ -14,6 +14,13 @@
 | 8. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
 | 9. | [VMSS]()
 
+
+### Limitation of Free-trial subscription
+* Credits only for a month.
+* Only 3 public ip's are allowed.
+* Either public ip or Load balancer should be selected.
+* Resource group, VM, Vnet should be in same region.
+
 <b>📌  Draw networking diagram in [draw.io](https://app.diagrams.net) tool</b>
 <h2>Demo page</h2>
 
