@@ -4,7 +4,7 @@
 
 | S.no   | Table of content   |
 |------------|------------|
-| 1. | [What is Azure](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
+| 1. | [Azure Definition](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
 | 2. | [create Azure account](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
 | 3. | [Login to azure account](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
 | 4. | [External user](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
