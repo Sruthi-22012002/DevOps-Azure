@@ -82,6 +82,7 @@
 <strong>Select Add</strong> to create the A record.
 </div>
 
+## Outcome 
 **Access your domain with sub domain name http://frontend.react.dreamteamit.in/**
 
 
