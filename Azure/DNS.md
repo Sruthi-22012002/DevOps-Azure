@@ -56,6 +56,7 @@
 
 > Enter name and IP address and click "add"
 
+**Access your domain with sub domain name http://frontend.react.dreamteamit.in/**
 
 
 
