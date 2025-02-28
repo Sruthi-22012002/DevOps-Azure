@@ -24,7 +24,9 @@
 ![image](https://github.com/user-attachments/assets/db6cff89-123f-455f-9851-c503c3852380)
 
 ### Demo work
-> Search for **"DNS"** in azure portal
+> Search for **"DNS Zones"** in azure portal
+
+<h4>A DNS zone is used to host the DNS records for a particular domain. For example, the domain 'contoso.com' may contain a number of DNS records such as 'mail.contoso.com' (for a mail server) and 'www.contoso.com' (for a web site). Azure DNS allows you to host your DNS zone and manage your DNS records, and provides name servers that will respond to DNS queries from end users with the DNS records that you create. </h4>
 
 ![image](https://github.com/user-attachments/assets/120b2829-9908-445b-84d1-a977f77f2156)
 
@@ -46,7 +48,13 @@
  
 ![image](https://github.com/user-attachments/assets/658e18eb-769a-4505-bdb2-f7aaa13d8f8d)
 
-> 
+> Register the NS values in DNS providers (e.g., GoDaddy, Cloudflare, Namecheap).
+
+> Enter the new recordsets with your ip address,
+
+![image](https://github.com/user-attachments/assets/69d541cc-408a-4ebc-9433-a67b113a09ae)
+
+> Enter name and IP address and click "add"
 
 
 
