@@ -41,9 +41,34 @@
 
 * Under Administrator account configure the admin username and set up an associated password or SSH public key.
 
- > A Password must be at least 12 characters long and meet three out of the four following complexity requirements: one lower case character, one upper case character, one number, and one special character. For more information, see username and password requirements.
-
- > If you select a Linux OS disk image, you can instead choose SSH public key. You can use an existing key or create a new one. In this example, we will have Azure generate a new key pair for us. For more information on generating key pairs, see create and use SSH keys.
+  > A Password must be at least 12 characters long and meet three out of the four following complexity requirements: one lower case character, one upper case character, one number, and one special character. For more information, see username and password requirements.
+ 
+  > If you select a Linux OS disk image, you can instead choose SSH public key. You can use an existing key or create a new one. In this example, we will have Azure generate a new key pair for us. For more information on generating key pairs, see create and use SSH keys.
 
  ![image](https://github.com/user-attachments/assets/8eb04a2d-da34-46db-8906-77f690781448)
 
+* Select Next: **Disks** to move the disk configuration options. For this quickstart, leave the default disk configurations.
+
+* Select Next: **Networking** to move the networking configuration options.
+
+* On the Networking page, under Load balancing, select the Use a load balancer checkbox to put the scale set instances behind a load balancer.
+
+* In Load balancing options, select Azure load balancer.
+
+* In Select a load balancer, select a load balancer or create a new one.
+
+* For Select a backend pool, select Create new, type myBackendPool, then select Create.
+
+![image](https://github.com/user-attachments/assets/9a7d4aa2-257b-4999-8122-1f55a90277a1)
+
+* Select Next: **Scaling** to move to the scaling configurations.
+
+* On the Scaling page, set the initial instance count field to 5. You can set this number up to 1000.
+
+* For the Scaling policy, keep it Manual.
+
+![image](https://github.com/user-attachments/assets/d8c5c435-d8f0-45eb-8006-c88cf4976c08)
+
+* When you're done, select Review + create.
+  
+* After it passes validation, select Create to deploy the scale set.
