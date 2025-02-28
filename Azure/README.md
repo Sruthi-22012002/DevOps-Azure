@@ -12,8 +12,8 @@
 | 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
 | 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
 | 8. | [Flexible MYSQL Server](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/flexible-mysql-server.md)|
-| 9. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
-| 10. | [VMSS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md)
+| 9. | [VMSS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md)
+| 10. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
 | 11. | [DNS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md)
 
 
