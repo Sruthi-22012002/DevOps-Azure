@@ -11,10 +11,11 @@
 | 5. |  [Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md) |
 | 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
 | 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
-| 8. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
-| 9. | [VMSS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md)
-| 10. | [DNS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md)
-)
+| 8. | [Flexible MYSQL Server]()|
+| 9. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
+| 10. | [VMSS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md)
+| 11. | [DNS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md)
+
 
 
 ### Limitation of Free-trial subscription
