@@ -86,8 +86,10 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/nginx-alpine:latest
 ```
 ### 4.4.1 Need for create a secret dockurhub login
-![image](https://github.com/user-attachments/assets/8c9a0f0c-4e50-4c27-9d1c-d171b116661f)
 * Secrets and variables -> actions -> new repository secrets
+
+![image](https://github.com/user-attachments/assets/8c9a0f0c-4e50-4c27-9d1c-d171b116661f)
+
   ![image](https://github.com/user-attachments/assets/621f1b40-bfb8-48a4-bc0f-c57bee4c0e77)
 ### 4.5. Commit and push your action
 ```bash
