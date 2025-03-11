@@ -2,22 +2,67 @@
 
 ## Index
 
-| S.no   | Table of content   |
-|------------|------------|
-| 1. | [Azure Definition](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
-| 2. | [create Azure account](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
-| 3. | [Login to azure account](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
-| 4. | [External user](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md) |
-| 5. |  [Connect VM to ssh](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md) |
-| 6. |  [Connect Vm with Bastion Host](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md) |
-| 7. |  [Connect Vm with Bastion Services](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md) |
-| 8. | [Flexible MYSQL Server](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/flexible-mysql-server.md)|
-| 9. | [VMSS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md)
-| 10. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
-| 11. | [DNS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md)
-| 12. | [Container App]()
-| | [12.1. container app manually](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-manual.md)|
-| | [12.2. container-app automated](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md)
+<table style="width:100%">
+  <tr>
+    <th>S.No</th>
+    <th>Table of Content</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md">Azure Definition</a></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md">Create Azure Account</a></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md">Login to Azure Account</a></td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/azure%20basics.md">External User</a></td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20VM%20to%20ssh.md">Connect VM to SSH</a></td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion.md">Connect VM with Bastion Host</a></td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/connect%20vm%20with%20bastion%20service.md">Connect VM with Bastion Services</a></td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/flexible-mysql-server.md">Flexible MYSQL Server</a></td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/vmss.md">VMSS</a></td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md">Deploy 3-Tier Application</a></td>
+  </tr>
+  <tr>
+    <td>11.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md">DNS</a></td>
+  </tr>
+  <tr>
+    <td rowspan="3">12.</td>
+    <td><a href="">Container App</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-manual.md">12.1. Container App Manually</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md">12.2. Container App Automated</a></td>
+  </tr>
+</table>
+
 
 
 
