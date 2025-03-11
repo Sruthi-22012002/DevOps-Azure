@@ -16,8 +16,8 @@
 | 10. | [Deploy 3-tier-application](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/deploy-3-tier-application.md)
 | 11. | [DNS](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/DNS.md)
 | 12. | [Container App]()
-| 12.1| [container app manually](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app.md)|
-| 12.2| [container-app automated]()
+| | [12.1. container app manually](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-manual.md)|
+| | [12.2. container-app automated](https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md)
 
 
 
