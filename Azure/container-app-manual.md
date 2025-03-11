@@ -183,7 +183,7 @@ git push origin main
 * <b>Enable</b> the ingress
 ![image](https://github.com/user-attachments/assets/a2d6f898-b438-4f0e-aa9f-ee715ca4c2be)
 
-* Fill the port number 80.
+* Fill the port number 80(frontend) and 8080(backend).
 
 > Select **Review and create** at the bottom of the page.
 
