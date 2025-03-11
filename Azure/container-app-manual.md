@@ -1,4 +1,4 @@
-<div align="center"><h1>Azure Container Apps</h1></div>
+<div align="center"><h1>Azure Container App - Manual</h1></div>
 
 > Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 ### Common uses of Azure Container Apps include:
