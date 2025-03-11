@@ -86,6 +86,13 @@ spring.jpa.hibernate.ddl-auto = update
 > Create a docker compose file for **both frontend and backend** to run the job, inside the **<i>ems-ops-phase-0/</i>**
 
 ```bash
+mkdir .github
+cd .github
+mkdir workflow
+cd .github/workflow
+```
+
+```bash
 sudo nano docker-compose.yml
 ```
 ```bash
