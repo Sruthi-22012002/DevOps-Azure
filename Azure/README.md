@@ -1,8 +1,8 @@
 <div align="center"><h1> AZURE</h1></div>
 
 ## Index
-
-<table style="width:100%">
+<div align="center">
+<table style="width:10000%">
   <tr>
     <th>S.No</th>
     <th>Table of Content</th>
@@ -53,7 +53,7 @@
   </tr>
   <tr>
     <td rowspan="3">12.</td>
-    <td><a href="">Container App</a></td>
+    <td>Container App</td>
   </tr>
   <tr>
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-manual.md">12.1. Container App Manually</a></td>
@@ -62,9 +62,7 @@
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md">12.2. Container App Automated</a></td>
   </tr>
 </table>
-
-
-
+</div>
 
 ### Limitation of Free-trial subscription
 * Credits only for a month.
