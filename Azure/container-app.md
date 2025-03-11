@@ -71,6 +71,17 @@ EXPOSE 8080
 # Run the application
 ENTRYPOINT ["java", "-jar", "springboot-backend-0.0.1-SNAPSHOT.jar"]
 ```
+### Create Azure mysql server
+
+> update the **application.properties** file in springboot-backend
+```bash
+spring.datasource.url=jdbc:mysql://demo-server-sql-mysql.mysql.database.azure.com:3306/employees?useSSL=true&requireSSL=true&verifyServerCertificate=true
+spring.datasource.username=demoserver22
+spring.datasource.password=Sruthi@22012002
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto = update
+```
+### Create a docker-compose.yml to run job in github action
 
 > Create a docker compose file for **both frontend and backend** to run the job, inside the **<i>ems-ops-phase-0/</i>**
 
@@ -142,5 +153,58 @@ git push origin main
 > To list the images in your registry, navigate to your registry in the portal and select **Repositories**,
 
 ![image](https://github.com/user-attachments/assets/18020b13-41ee-4e43-90d3-d031d8dc8fa4)
+
+## Create container app
+ > To create your container app, start at the Azure portal home page.
+    * Search for Container Apps in the top search bar.
+    * Select **Container Apps** in the search results.
+    * Select the Create button.
+
+![image](https://github.com/user-attachments/assets/5edc8f28-3979-41f6-926e-b501c631d43c)
+
+![image](https://github.com/user-attachments/assets/296215be-f104-4fd7-b120-2e044b070fd6)
+
+> In the **Basics** tab, do the following actions.
+
+#### * Project details
+![image](https://github.com/user-attachments/assets/dc3bf724-3cab-43e5-aa9e-753b7796edb8)
+
+#### * Container Apps Environment
+![image](https://github.com/user-attachments/assets/d98dad1d-a5c3-4f35-b0aa-24ae58c5f0f5)
+
+> In the **Container** tab, do the following actions.
+
+* Fill container details, others use default values
+  
+![image](https://github.com/user-attachments/assets/1305ebfd-fe7d-4d7c-8baf-939828ef0fdd)
+
+> In the **ingress** tab, do the following actions.
+
+* <b>Enable</b> the ingress
+![image](https://github.com/user-attachments/assets/a2d6f898-b438-4f0e-aa9f-ee715ca4c2be)
+
+* Fill the port number 80.
+
+> Select **Review and create** at the bottom of the page.
+
+## Verify deployment
+
+> Select **Go to resource** to view your new container app.
+
+> Select **Create**
+
+> Select the link next to **Application URL** to view your application. The following message appears in your browser.
+
+![image](https://github.com/user-attachments/assets/3c81f63f-aaf4-445c-b4d4-f16f39fc31ff)
+
+ 💡 **Tip:** After the backend container created, copy and paste the application URL in **EmployeeService.js** to access the backend
+ 
+ ```bash
+const EMPLOYEE_BASE_REST_API_URL = 'https://backend-container-app.salmonhill-fdb0b10f.eastus.azurecontainerapps.io/api/v1/employees';
+```
+
+## Final page
+
+![image](https://github.com/user-attachments/assets/e6dbfd58-6a34-46ac-af48-298a44265b50)
 
 
