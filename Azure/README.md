@@ -62,6 +62,7 @@
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md">12.2. Container App Automated</a></td>
   </tr>
    <tr>
+    <td>13.</td>
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/terraform.md">Terraform</a></td>
   </tr>
 </table>
