@@ -65,6 +65,10 @@
     <td>13.</td>
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/terraform.md">Terraform</a></td>
   </tr>
+   <tr>
+    <td>14.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/storage.md">Storage</a></td>
+  </tr>
 </table>
 </div>
 
