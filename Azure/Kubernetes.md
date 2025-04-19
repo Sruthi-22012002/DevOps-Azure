@@ -6,7 +6,7 @@
 
 ## Architecture Diagram
 
-https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e
+![image](https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e)
 
 ### Kubernetes Master Node
 In Kubernetes (k8s), a master node is the **control plane component** responsible for managing the cluster. It coordinates and schedules tasks, maintains cluster state, and monitors node health. It includes components like <b>API server, scheduler, etcd and controller manager</b>, ensuring overall cluster functionality and orchestration of containerized applications.
@@ -18,10 +18,11 @@ In Kubernetes (k8s), a master node is the **control plane component** responsibl
 * etcd is a highly available key-value store that helps **maintain** the **state** of your Kubernetes cluster and configuration  details like subnets and config maps in Kubernetes database. 
 
 #### Schedular
-* **Kube-scheduler** assigns **tasks** to worker nodes and manages **new requests** from the API Server, ensuring they are directed to healthy nodes.
+* `Kube-scheduler` assigns **tasks** to worker nodes and manages **new requests** from the API Server, ensuring they are directed to healthy nodes.
 
 #### Controller Manager
-* **Kube Controller Manager** task is to **retrieve** the desired **state** from the API Server. 
+* `Kube Controller Manager` task is to **retrieve** the desired **state** from the API Server.
+
 <i>If the desired state does not match the current state of the object, corrective steps are taken by the control loop to align the current state with the desired state.</i>
 
 ### Kubernetes Worker Node
@@ -33,11 +34,15 @@ Worker nodes in a cluster are machines or servers running applications, controll
 #### Kube-proxy
 * Kube-proxy enables worker node communication, managing **network rules**. It ensures rules are set for containers to communicate across nodes.
 
-<b>Also Read:</b> [Container Runtime](#container-runtime)
-
-#### Pods
-* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network. It includes specifications for container execution, enabling easy inter-container communication.
-
 #### container Runtime
 * Container Runtime, **responsible** for container **execution**, supports multiple runtimes: Docker, containers.
+  
+<b>Guide:</b> [Kubernetes](https://k21academy.com/docker-kubernetes/kubernetes-architecture-components-overview-for-beginners/)
+
+### Node pools
+* In AKS, nodes of the **same configuration** such as machine size, CPU, memory, and disk specifications are **grouped** together into node pools. These node pools contain the underlying virtual machine scale sets and virtual machines (VMs) that run your applications.
+
+### Pods
+* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network. It includes specifications for container execution, enabling easy inter-container communication.
+
 
