@@ -39,10 +39,52 @@ Worker nodes in a cluster are machines or servers running applications, controll
   
 <b>Guide:</b> [Kubernetes](https://k21academy.com/docker-kubernetes/kubernetes-architecture-components-overview-for-beginners/)
 
-### Node pools
+## Node pools
 * In AKS, nodes of the **same configuration** such as machine size, CPU, memory, and disk specifications are **grouped** together into node pools. These node pools contain the underlying virtual machine scale sets and virtual machines (VMs) that run your applications.
 
-### Pods
-* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network. It includes specifications for container execution, enabling easy inter-container communication.
+## Name Space
+* Kubernetes Namespace is a mechanism that enables you to organize resources. It is like a virtual cluster inside the cluster.
+* A namespace isolates the resources from the resources of other namespaces.
+* Each namespace has its own set of policies, resources, and access controls making them ideal for the environments such as development, staging and production.
+### Kubernetes Namespaces
+> When the kubernetes cluster is setup, at that time 4 kubernetes namespaces are created, each with some specific purpose. Those are as follows:
 
+* **kube-system:** System processes like **Master and kubectl processes** are deployed in this namespace; thus, it is advised not to create or modify the namespace.
+* **kube-public:** This namespace contains **publicly accessible data** like a [configMap](#configmap) containing cluster information.
+* **kube-node-lease:** This namespace is the **heartbeat** of nodes. Each node has its associated lease object. It determines the availability of a node.
+* **default:** This is the namespace that you use to create your resources by default.
+### Create namespace
+    ```bash
+      $ kubectl create namespace your-namespace
+    ```
+### Sample code
+  ```bash
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: test-ns
+      labels:
+        team: testingteam
+  ```
+### Run namespace
+    ```bash
+    kubectl get namespace
+    ```
+### Blue-Green Deployment
+> The blue/green deployment technique enables you to release applications by shifting traffic between two identical environments that are running different versions of the application.
 
+> Blue Deployment(Production) : Current live version.
+
+![Screenshot (10)](https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412)
+
+> Green Deployment(Staging) : New version to be deployed.
+
+![Screenshot (11)](https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf)
+
+## Pods
+* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
+* A pod is the smallest unit that exists in Kubernetes. It is similar to that of tokens in C or C++ languages.
+* It includes specifications for container execution, enabling easy inter-container communication.
+
+## configMap
+* In Kubernetes, Configmap is an API object that is mainly used to store non-confidential data. The data that is stored in ConfigMap is stored as key-value pairs.
