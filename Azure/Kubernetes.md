@@ -86,5 +86,32 @@ kubectl create namespace your-namespace
 * A pod is the smallest unit that exists in Kubernetes. It is similar to that of tokens in C or C++ languages.
 * It includes specifications for container execution, enabling easy inter-container communication.
 
+### Pods in two many ways
+* **Pods that run a single container.** The `one-container-per-Pod` model is the most common Kubernetes use case; in this case, you can think of a Pod as a wrapper around a single container; Kubernetes manages Pods rather than managing the containers directly.
+
+* **Pods that run multiple containers** that need to work together. A Pod can **encapsulate** an application composed of multiple co-located containers that are tightly coupled and need to share resources. These co-located containers form a single cohesive unit.
+
+### Sample pod .yaml file
+```bash
+kubectl create -f simple-pod.yml
+```
+
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+```
+
+```bash
+kubectl apply -f simple-pod.yaml
+```bash
+
 ## configMap
 * In Kubernetes, Configmap is an API object that is mainly used to store non-confidential data. The data that is stored in ConfigMap is stored as key-value pairs.
