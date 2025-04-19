@@ -6,7 +6,7 @@
 
 ## Architecture Diagram
 
-![image](https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e)
+<img src="https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e" alt="kubernetes" width="20"/>
 
 ### Kubernetes Master Node
 In Kubernetes (k8s), a master node is the **control plane component** responsible for managing the cluster. It coordinates and schedules tasks, maintains cluster state, and monitors node health. It includes components like <b>API server, scheduler, etcd and controller manager</b>, ensuring overall cluster functionality and orchestration of containerized applications.
@@ -54,9 +54,9 @@ Worker nodes in a cluster are machines or servers running applications, controll
 * **kube-node-lease:** This namespace is the **heartbeat** of nodes. Each node has its associated lease object. It determines the availability of a node.
 * **default:** This is the namespace that you use to create your resources by default.
 ### Create namespace
-    ```bash
-      $ kubectl create namespace your-namespace
-    ```
+```bash
+kubectl create namespace your-namespace
+```
 ### Sample code
   ```bash
     apiVersion: v1
@@ -67,19 +67,19 @@ Worker nodes in a cluster are machines or servers running applications, controll
         team: testingteam
   ```
 ### Run namespace
-    ```bash
-    kubectl get namespace
-    ```
+  ```bash
+  kubectl get namespace
+  ```
 ### Blue-Green Deployment
 > The blue/green deployment technique enables you to release applications by shifting traffic between two identical environments that are running different versions of the application.
 
-> Blue Deployment(Production) : Current live version.
+**Blue Deployment(Production) : Current live version.**
 
-![Screenshot (10)](https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412)
+<img src="https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412" alt="blue" width="20"/>
 
-> Green Deployment(Staging) : New version to be deployed.
+**Green Deployment(Staging) : New version to be deployed.**
 
-![Screenshot (11)](https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf)
+<img src="https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf" alt="green" width="20"/>
 
 ## Pods
 * A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
