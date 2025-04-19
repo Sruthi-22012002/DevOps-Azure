@@ -1,12 +1,12 @@
 <div align ="center"><h2>Kubernetes</h2></div>
 
-<img src="https://github.com/user-attachments/assets/f2448f9c-e78f-4f4e-afd0-004f838dbc0c" alt="Kubernetes Logo" width="60"/>**Kubernetes**
+<img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" alt="Kubernetes Logo" width="20"/> **Kubernetes**
 > In organizations, multiple numbers of containers run on multiple hosts at a time. So it becomes very hard to manage all the containers together, a simple solution to this would be Kubernetes. Kubernetes is an open-source platform for managing containerized workloads and services. Kubernetes take care of scaling and failover for our application running on the container.
 
 
 ## Architecture Diagram
 
-<img src="https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e" alt="kubernetes" width="20"/>
+<img src="https://github.com/user-attachments/assets/12e47b31-be28-4798-a8b1-5555ac64052e" alt="kubernetes" width="700"/>
 
 ### Kubernetes Master Node
 In Kubernetes (k8s), a master node is the **control plane component** responsible for managing the cluster. It coordinates and schedules tasks, maintains cluster state, and monitors node health. It includes components like <b>API server, scheduler, etcd and controller manager</b>, ensuring overall cluster functionality and orchestration of containerized applications.
@@ -75,11 +75,11 @@ kubectl create namespace your-namespace
 
 **Blue Deployment(Production) : Current live version.**
 
-<img src="https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412" alt="blue" width="20"/>
+<img src="https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412" alt="blue" width="700"/>
 
 **Green Deployment(Staging) : New version to be deployed.**
 
-<img src="https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf" alt="green" width="20"/>
+<img src="https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf" alt="green" width="700"/>
 
 ## Pods
 * A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
