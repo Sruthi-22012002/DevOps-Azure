@@ -28,7 +28,7 @@ In Kubernetes (k8s), a master node is the **control plane component** responsibl
 Worker nodes in a cluster are machines or servers running applications, controlled by the Kubernetes master. Multiple nodes connect to the master. On each node, multiple [pods](#pods) and containers operate.
 
 #### Kubelet
-* Kubelet an **agent** on each node, **communicates** with the master. It ensures pod **containers health**, executing tasks like deploying or destroying containers, reporting back to the Master.
+* Kubelet an **agent** on each node, **communicates** with the master. It ensures pod **containers health**, executing tasks like deploying or **destroying containers**, reporting back to the Master.
 
 #### Kube-proxy
 * Kube-proxy enables worker node communication, managing **network rules**. It ensures rules are set for containers to communicate across nodes.
