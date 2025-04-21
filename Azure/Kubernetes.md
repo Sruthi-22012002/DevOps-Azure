@@ -1,8 +1,7 @@
 <div align ="center"><h2>Kubernetes</h2></div>
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" alt="Kubernetes Logo" width="20"/> **Kubernetes**
-> In organizations, multiple numbers of containers run on multiple hosts at a time. So it becomes very hard to manage all the containers together, a simple solution to this would be Kubernetes. Kubernetes is an open-source platform for managing containerized workloads and services. Kubernetes take care of scaling and failover for our application running on the container.
-
+> Kubernetes is an open-source container orchestration platform used to automate the deployment, scaling, and management of containerized applications. It simplifies the process of managing applications by automating tasks like scaling, monitoring, and updating, making it easier to run distributed applications at scale.
 
 ## Architecture Diagram
 
