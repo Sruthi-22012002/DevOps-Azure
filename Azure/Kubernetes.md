@@ -156,3 +156,86 @@ kubectl apply -f simple-pod.yaml
   
 ## configMap
 * In Kubernetes, Configmap is an API object that is mainly used to store non-confidential data. The data that is stored in ConfigMap is stored as key-value pairs.
+
+## Installation
+### Docker
+[docker](https://www.docker.com/get-started/)
+### Verify installation
+```bash
+docker version
+```
+### Kubectl
+[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+### minikube
+[minikube](https://minikube.sigs.k8s.io/docs/start/)
+### Verify installation
+```bash
+minikube version
+```
+```bash
+minikube start
+```
+## Deployment of single pods
+### Pod- sample code
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+```
+
+```bash
+kubectl apply -f pod.yaml
+```
+> Output : pod/nginx created
+
+```bash
+kubectl get pods
+```
+> output : NAME    READY   STATUS              RESTARTS   AGE
+nginx   0/1     ContainerCreating   0          3s
+
+## Deployment of 3 pods(replicas)
+### Pod- sample code
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+```
+
+```bash
+kubectl apply -f nginx-deployment.yaml
+```
+> Output : deployment.apps/nginx-deployment created
+
+```bash
+kubectl get deployments
+```
+> output : NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   3/3     3            3           19s
+
