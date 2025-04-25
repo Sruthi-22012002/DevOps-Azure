@@ -59,10 +59,9 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
   “I’m watching over the Pods on this node and reporting their status back to the master
   
 ## 🔹 Posibilities for setting up a kubernetes cluster
-### 1. Managed Kubernetes Services (Production)
+### 1. ☁️ Cloud Providers (Managed Kubernetes)
 
 <img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="300"/>
-
 
 **Stack:**
 > App → Binaries inside Containers → Container Runtime (like Docker) → OS → Hardware
@@ -114,7 +113,7 @@ kubectl apply -f simple-pod.yaml
 | Role / ClusterRole         | Defines permissions within a namespace or across the whole cluster.         |
 | RoleBinding / ClusterRoleBinding | Assigns roles to users or services.                                     |
 
-### 2. Local Kubernetes (For Development/Testing)
+### 2. 🖥️ Local Kubernetes (For Development/Testing)
 #### 🛠️ Tools:
 * **Minikube – Single-node cluster**
 > Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. It’s primarily used for development and testing purposes when you don’t want to set up a full Kubernetes cluster.
@@ -184,7 +183,7 @@ D --> E[Optional: Tear Down Cluster]
 
   `Use GUI or Docker CLI (docker build, docker run).Use GUI or Docker CLI (docker build, docker run)'
   
-### 3. Kubernetes from Scratch (Manual Setup on VMs or Bare Metal)
+### 3. 🏢 On-Premises Infrastructure (Manual Setup on VMs or Bare Metal)
 #### 🛠️ Tools: 
 * kubeadm
 * kubectl
