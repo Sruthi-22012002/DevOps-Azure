@@ -61,7 +61,7 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
 ## 🔹 Posibilities for setting up a kubernetes cluster
 ### 1. Managed Kubernetes Services (Production)
 
-<img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="400"/>
+<img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="300"/>
 
 
 **Stack:**
