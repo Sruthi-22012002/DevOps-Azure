@@ -16,7 +16,7 @@ In Kubernetes (k8s), a master node is the **control plane component** responsibl
 #### etcd
 * etcd is a highly available key-value store that helps **maintain** the **state** of your Kubernetes cluster and configuration  details like subnets and config maps in Kubernetes database. 
 
-#### Schedular
+#### Scheduler
 * `Kube-scheduler` assigns **tasks** to worker nodes and manages **new requests** from the API Server, ensuring they are directed to healthy nodes.
 
 #### Controller Manager
