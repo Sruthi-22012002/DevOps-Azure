@@ -38,58 +38,39 @@ Worker nodes in a cluster are machines or servers running applications, controll
   
 <b>Guide:</b> [Kubernetes](https://k21academy.com/docker-kubernetes/kubernetes-architecture-components-overview-for-beginners/)
 
-## Node pools
-* In AKS, nodes of the **same configuration** such as machine size, CPU, memory, and disk specifications are **grouped** together into node pools. These node pools contain the underlying virtual machine scale sets and virtual machines (VMs) that run your applications.
+## How does Kubernetes work?
+When you write a YAML file like `deployment.yaml`, you're basically telling Kubernetes, “Hey, I need 3 copies of my app running forever.” This request is received by the Kubernetes master, where several key components work together to make it happen.
 
-## Name Space
-* Kubernetes Namespace is a mechanism that enables you to organize resources. It is like a virtual cluster inside the cluster.
-* A namespace isolates the resources from the resources of other namespaces.
-* Each namespace has its own set of policies, resources, and access controls making them ideal for the environments such as development, staging and production.
-### Kubernetes Namespaces
-> When the kubernetes cluster is setup, at that time 4 kubernetes namespaces are created, each with some specific purpose. Those are as follows:
+### Components of the Workflow:
 
-* **kube-system:** System processes like **Master and kubectl processes** are deployed in this namespace; thus, it is advised not to create or modify the namespace.
-* **kube-public:** This namespace contains **publicly accessible data** like a [configMap](#configmap) containing cluster information.
-* **kube-node-lease:** This namespace is the **heartbeat** of nodes. Each node has its associated lease object. It determines the availability of a node.
-* **default:** This is the namespace that you use to create your resources by default.
-### Create namespace
-```bash
-kubectl create namespace your-namespace
-```
-### Sample code
-  ```bash
-    apiVersion: v1
-    kind: Namespace
-    metadata:
-      name: test-ns
-      labels:
-        team: testingteam
-  ```
-### Run namespace
-  ```bash
-  kubectl get namespace
-  ```
-### Blue-Green Deployment
-> The blue/green deployment technique enables you to release applications by shifting traffic between two identical environments that are running different versions of the application.
+- 🗨️ **Kube-API Server:**  
+  “Got it! Let me check how many nodes are free.”
 
-**Blue Deployment(Production) : Current live version.**
+- 🗨️ **Scheduler:**  
+  “Okay, I found some free nodes. Let’s get those Pods running.”
 
-<img src="https://github.com/user-attachments/assets/a586dd8c-f46c-429c-95c0-5c1f366ae412" alt="blue" width="700"/>
+- 🗨️ **Controller Manager:**  
+  “I’m on it! I’ll make sure the right number of Pods are always running. If one crashes, I’ll create a new one.”
 
-**Green Deployment(Staging) : New version to be deployed.**
+- 🗨️ **Worker Nodes:**  
+  “We’re ready! We’ve got the containers up and running.”
 
-<img src="https://github.com/user-attachments/assets/bb7487f0-059c-4092-8c7a-7cf9b7a20bdf" alt="green" width="700"/>
+- 🗨️ **kubelet:**  
+  “I’m watching over the Pods on this node and reporting their status back to the master
+  
+## 🔹 Posibilities for setting up a kubernetes cluster
+### 1. Managed Kubernetes Services (Production)
 
-## Pods
-* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
-* A pod is the smallest unit that exists in Kubernetes. It is similar to that of tokens in C or C++ languages.
-* It includes specifications for container execution, enabling easy inter-container communication.
+<img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="400"/>
 
-### Pods in two many ways
-* **Pods that run a single container.** The `one-container-per-Pod` model is the most common Kubernetes use case; in this case, you can think of a Pod as a wrapper around a single container; Kubernetes manages Pods rather than managing the containers directly.
 
-* **Pods that run multiple containers** that need to work together. A Pod can **encapsulate** an application composed of multiple co-located containers that are tightly coupled and need to share resources. These co-located containers form a single cohesive unit.
+**Stack:**
+> App → Binaries inside Containers → Container Runtime (like Docker) → OS → Hardware
 
+**How it works**:
+* Instead of full VMs, we package apps and their dependencies into lightweight containers.
+* All containers share the host OS kernel via the container runtime.
+* Kubernetes orchestrates these containers: schedules, scales, and manages them.
 ### Sample pod .yaml file
 #### Create
 ```bash
@@ -112,47 +93,112 @@ spec:
 ```bash
 kubectl apply -f simple-pod.yaml
 ```
+### 🧾 Kubernetes Resource objects
 
-## Kubernetes Service
+| **Kind**                      | **Purpose**                                                                 |
+|------------------------------|------------------------------------------------------------------------------|
+| Pod                        | The smallest unit — runs one or more containers.                            |
+| Deployment                 | Manages a set of Pods — scaling, updating, and healing automatically.       |
+| ReplicaSet                 | Ensures a certain number of Pod replicas are running. Used by Deployments.  |
+| StatefulSet                | Like Deployment, but for **stateful apps** (e.g., databases).               |
+| DaemonSet                  | Ensures **one Pod per node** (e.g., for log collectors or monitoring).      |
+| Job                        | Runs a task **once** and exits successfully (e.g., batch jobs).             |
+| CronJob                    | Schedules Jobs to run on a **time schedule** (like a Linux cron).           |
+| Service                    | Exposes Pods as a **network service** (ClusterIP, NodePort, LoadBalancer). |
+| Ingress                    | Manages **external access** to Services via HTTP/HTTPS.                     |
+| ConfigMap                  | Stores **non-confidential** config data separately from app code.           |
+| Secret                     | Stores **confidential** data like passwords and API keys.                   |
+| PersistentVolume (PV)      | Represents **storage resources** (e.g., disks).                             |
+| PersistentVolumeClaim (PVC)| Requests storage from a PersistentVolume.                                   |
+| Namespace                  | Provides **isolated environments** within a cluster.                        |
+| Role / ClusterRole         | Defines permissions within a namespace or across the whole cluster.         |
+| RoleBinding / ClusterRoleBinding | Assigns roles to users or services.                                     |
 
-### 1. Deploy application (new)
-> Purpose: Deploy your application directly to a Kubernetes cluster.
+### 2. Local Kubernetes (For Development/Testing)
+#### 🛠️ Tools:
+* **Minikube – Single-node cluster**
+> Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. It’s primarily used for development and testing purposes when you don’t want to set up a full Kubernetes cluster.
+ 
+```mermaid
+graph TD
+A[Developer Machine] --> B[Minikube Start]
+B --> C[VM or Container with Kubernetes]
+C --> D[Single Node Cluster: Control Plane + Worker]
+D --> E[kubectl Configured]
+E --> F[Deploy Apps via kubectl]
+F --> G[Access via Service or Dashboard]
+```
+```bash
+C:\Users\sreem\Azure-projects> minikube start
+>>
+😄  minikube v1.35.0 on Microsoft Windows 10 Home Single Language 10.0.19045.5737 Build 19045.5737
+✨  Automatically selected the docker driver
+📌  Using Docker Desktop driver with root privileges
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.46 ...
+💾  Downloading Kubernetes v1.32.0 preload ...
+    > preloaded-images-k8s-v18-v1...:  333.57 MiB / 333.57 MiB  100.00% 94.85 K
+    > gcr.io/k8s-minikube/kicbase...:  500.31 MiB / 500.31 MiB  100.00% 123.23
+🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+💡  To pull new external images, you may need to configure a proxy: https://minikube.sigs.k8s.io/docs/reference/networking/proxy/
+🐳  Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+```
+* **Kind (Kubernetes IN Docker) – For CI pipelines**
+> Kind stands for Kubernetes IN Docker.It’s a tool for running Kubernetes clusters inside Docker containers—**no VMs needed**!
+```mermaid
+graph TD
+A[CI Pipeline Starts] --> B[Kind Creates Cluster in Docker]
+B --> C[kubectl Configured]
+C --> D[Deploy App & Run Tests]
+D --> E[Optional: Tear Down Cluster]
+```
+##### Sample dockerfile
+```bash
+      - name: Install Kind & kubectl
+        run: |
+          curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+          chmod +x ./kind && sudo mv ./kind /usr/local/bin/kind
+          sudo snap install kubectl --classic
 
-* This is a wizard-based tool to help you deploy containerized applications quickly to AKS (Azure Kubernetes Service).
-* You can specify container images, replica count, ports, and other settings.
-* It simplifies the process of writing yaml manifests manually.
+      - name: Create Kind Cluster
+        run: kind create cluster
 
-### 2. Kubernetes cluster
-> Purpose: Create a fully managed AKS cluster.
+      - name: Deploy App & Run Tests
+        run: |
+          kubectl apply -f deployment.yaml
+          kubectl wait --for=condition=available deployment/my-app --timeout=60s
+          # Run integration tests
+          ./run-tests.sh
+```
+* **GUI tools**
+* Rancher Desktop
+  > Run a local Kubernetes cluster (via k3s)
 
-* This is the option to create an Azure Kubernetes Service (AKS) cluster.
-* You get full control over the cluster configuration, including:
-    * Node pools
-    * Networking
-    * Monitoring
-    * Authentication
-* Best suited for production environments needing scalability and customization.
+  `Use nerdctl or kubectl for CLI access`
+* Docker Desktop
+  > Run Docker containers
 
-### 3. Automatic Kubernetes cluster (preview)
-> Purpose: Quickly deploy a Kubernetes cluster with automated settings (currently in preview).
+  `Use GUI or Docker CLI (docker build, docker run).Use GUI or Docker CLI (docker build, docker run)'
+  
+### 3. Kubernetes from Scratch (Manual Setup on VMs or Bare Metal)
+#### 🛠️ Tools: 
+* kubeadm
+* kubectl
+* kubelet
 
-* Automatically provisions the AKS cluster using best practice defaults.
-* Minimizes setup time for developers who want to focus on deploying apps rather than managing infrastructure.
-* May include built-in GitOps, monitoring, etc.
-* Preview means it's in a testing phase and may change.
+## Pods
+* A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
+* A pod is the smallest unit that exists in Kubernetes. It is similar to that of tokens in C or C++ languages.
+* It includes specifications for container execution, enabling easy inter-container communication.
 
-### 4. Add a Kubernetes cluster with Azure Arc
-> Purpose: Connect an existing on-premises or multi-cloud Kubernetes cluster to Azure.
+### Pods in two many ways
+* **Pods that run a single container.** The `one-container-per-Pod` model is the most common Kubernetes use case; in this case, you can think of a Pod as a wrapper around a single container; Kubernetes manages Pods rather than managing the containers directly.
 
-* Azure Arc lets you manage non-Azure Kubernetes clusters from within Azure.
-* Useful for hybrid or multi-cloud scenarios.
-* Provides visibility and governance using Azure tools (like Policy, Monitor, etc.)
-
-### 5. Create a Kubernetes cluster with Azure Arc
-> Purpose: Use Azure Arc to provision a Kubernetes cluster outside of Azure (e.g., on your VM or bare metal).
-
-* You can create and onboard a new Kubernetes cluster that’s not in Azure but still manageable from Azure.
-* Useful for organizations with existing infrastructure outside Azure wanting centralized control.
+* **Pods that run multiple containers** that need to work together. A Pod can **encapsulate** an application composed of multiple co-located containers that are tightly coupled and need to share resources. These co-located containers form a single cohesive unit.
   
 ## configMap
 * In Kubernetes, Configmap is an API object that is mainly used to store non-confidential data. The data that is stored in ConfigMap is stored as key-value pairs.
