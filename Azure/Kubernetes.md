@@ -237,7 +237,7 @@ Managed Kubernetes providers bring expertise in cloud-based security, helping to
 
 
 
-[Concepts](https://kubernetes.io/docs/concepts/)
+[Know more about Concepts](https://kubernetes.io/docs/concepts/)
 
 ## Pods
 * A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
