@@ -64,7 +64,7 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
 <img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="300"/>
 
 **Stack:**
-> App → Binaries inside Containers → Container Runtime (like Docker) → OS → Hardware
+> Hardware → Operating System → Container Runtime → Containers (App + Binaries only, no full OS inside).
 
 **How it works**:
 * Instead of full VMs, we package apps and their dependencies into lightweight containers.
@@ -117,16 +117,17 @@ kubectl apply -f simple-pod.yaml
 #### 🛠️ Tools:
 * **Minikube – Single-node cluster**
 > Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. It’s primarily used for development and testing purposes when you don’t want to set up a full Kubernetes cluster.
- 
+
 ```mermaid
 graph TD
-A[Developer Machine] --> B[Minikube Start]
-B --> C[VM or Container with Kubernetes]
-C --> D[Single Node Cluster: Control Plane + Worker]
-D --> E[kubectl Configured]
-E --> F[Deploy Apps via kubectl]
-F --> G[Access via Service or Dashboard]
+A[Developer Machine] --> B[Start Minikube]
+B --> C[Provision VM or Container with Kubernetes]
+C --> D["Single Node Cluster: Control Plane + Worker"]
+D --> E[Configure kubectl Context]
+E --> F[Deploy Applications via kubectl]
+F --> G[Access Applications via Service or Dashboard]
 ```
+
 ```bash
 C:\Users\sreem\Azure-projects> minikube start
 >>
@@ -148,6 +149,7 @@ C:\Users\sreem\Azure-projects> minikube start
 ```
 * **Kind (Kubernetes IN Docker) – For CI pipelines**
 > Kind stands for Kubernetes IN Docker.It’s a tool for running Kubernetes clusters inside Docker containers—**no VMs needed**!
+
 ```mermaid
 graph TD
 A[CI Pipeline Starts] --> B[Kind Creates Cluster in Docker]
@@ -194,6 +196,8 @@ D --> E[Optional: Tear Down Cluster]
 
   <img src="https://github.com/user-attachments/assets/d1de19e2-8a50-4d5c-b9c9-dabb58f31dfb" alt="kubernetes" width="400"/>
 
+## Concepts in kubernetes
+<img src="https://github.com/user-attachments/assets/cbc67283-0ed8-42d2-abad-fe34af772049" alt="kubernetes" width="400"/>
 
 ## Pods
 * A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
