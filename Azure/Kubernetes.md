@@ -219,22 +219,22 @@ A managed solution enables IT teams to better predict the monthly cost of runnin
 Managed Kubernetes providers bring expertise in cloud-based security, helping to protect the expanded attack surface that containers can create.
 
 ## Concepts in kubernetes
-# Kubernetes Topics Overview
 
-| Category | Description |
+| Category | Explanation |
 |:---------|:------------|
-| **Cluster Architecture** | Kubernetes system components and control flow |
-| **Containers** | How Kubernetes manages containerized applications |
-| **Workloads** | Deployments, StatefulSets, DaemonSets, and Jobs |
-| **Services, Load Balancing, and Networking** | Networking, Service discovery, Load balancing |
-| **Storage** | Persistent storage, volumes, dynamic provisioning |
-| **Configuration** | ConfigMaps, Secrets, application configuration |
-| **Security** | Authentication, Authorization, Secrets management |
-| **Policies** | PodSecurity, NetworkPolicies, ResourceQuota policies |
-| **Scheduling, Preemption, and Eviction** | Pod scheduling, priorities, eviction mechanisms |
-| **Cluster Administration** | Cluster setup, maintenance, upgrades |
-| **Windows in Kubernetes** | Kubernetes support for Windows nodes |
-| **Extending Kubernetes** | CRDs, APIs, Webhooks, Operator pattern |
+| **Cluster Architecture** | Describes how Kubernetes is built: the Control Plane manages the system, Nodes run applications, and components like etcd, scheduler, and controller manager coordinate the cluster. |
+| **Containers** | Kubernetes uses containers (like Docker) to package, run, start, stop, and restart applications across the cluster. |
+| **Workloads** | Types of tasks Kubernetes runs: **Deployments** (rolling updates), **StatefulSets** (apps needing stable storage), **DaemonSets** (run a pod on every node), **Jobs** (tasks that run to completion). |
+| **Services, Load Balancing, and Networking** | Kubernetes manages app networking: **Services** expose apps, **load balancing** shares traffic, and **service discovery** helps apps find each other. |
+| **Storage** | Kubernetes supports **persistent storage** using volumes and **dynamic provisioning** to automatically create storage for applications. |
+| **Configuration** | Uses **ConfigMaps** for non-sensitive configuration data and **Secrets** for sensitive data like passwords, keeping application configuration clean and secure. |
+| **Security** | Manages **Authentication** (verifying identity), **Authorization** (controlling access), and **Secrets management** (safely storing confidential information). |
+| **Policies** | Sets cluster rules: **PodSecurity** (control pod behavior), **NetworkPolicies** (manage pod communication), **ResourceQuotas** (limit resource usage). |
+| **Scheduling, Preemption, and Eviction** | Kubernetes **schedules** pods to the right nodes, can **preempt** lower-priority pods if needed, and **evicts** pods when resources are low. |
+| **Cluster Administration** | Covers setting up, maintaining, scaling, monitoring, and upgrading the Kubernetes cluster. |
+| **Windows in Kubernetes** | Supports running Windows containers alongside Linux containers within the same Kubernetes cluster. |
+| **Extending Kubernetes** | Add new features using **CRDs** (Custom Resources), **APIs**, **Webhooks**, and **Operators** that automate complex app management tasks. |
+
 
 
 [Concepts](https://kubernetes.io/docs/concepts/)
