@@ -52,8 +52,8 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
 - 🗨️ **Controller Manager:**  
   “I’m on it! I’ll make sure the right number of Pods are always running. If one crashes, I’ll create a new one.”
 
-- 🗨️ **Worker Nodes:**  
-  “We’re ready! We’ve got the containers up and running.”
+- 🗨️ **Container Runtime:**  
+  “I'm creating the pod.”
 
 - 🗨️ **kubelet:**  
   “I’m watching over the Pods on this node and reporting their status back to the master
