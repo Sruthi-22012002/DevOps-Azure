@@ -185,9 +185,15 @@ D --> E[Optional: Tear Down Cluster]
   
 ### 3. 🏢 On-Premises Infrastructure (Manual Setup on VMs or Bare Metal)
 #### 🛠️ Tools: 
-* kubeadm
-* kubectl
-* kubelet
+* **kubeadm(setup the cluster)**
+    > Tool to set up (initialize) a Kubernetes cluster easily.
+* **kubectl(manage the cluster)**
+    > Command-line tool to interact with the Kubernetes cluster.
+* **kubelet(Runs on each node to maintain containers)**
+    > An agent that runs on every node (master and worker) and ensures the containers are running as expected.
+
+  <img src="https://github.com/user-attachments/assets/d1de19e2-8a50-4d5c-b9c9-dabb58f31dfb" alt="kubernetes" width="400"/>
+
 
 ## Pods
 * A Kubernetes pod is a **set of containers** on a single host, sharing storage and network.
