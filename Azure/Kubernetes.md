@@ -219,7 +219,23 @@ A managed solution enables IT teams to better predict the monthly cost of runnin
 Managed Kubernetes providers bring expertise in cloud-based security, helping to protect the expanded attack surface that containers can create.
 
 ## Concepts in kubernetes
-<p align="center"> <img src="https://github.com/user-attachments/assets/cbc67283-0ed8-42d2-abad-fe34af772049" alt="kubernetes" width="400"/></div>
+# Kubernetes Topics Overview
+
+| Category | Description |
+|:---------|:------------|
+| **Cluster Architecture** | Kubernetes system components and control flow |
+| **Containers** | How Kubernetes manages containerized applications |
+| **Workloads** | Deployments, StatefulSets, DaemonSets, and Jobs |
+| **Services, Load Balancing, and Networking** | Networking, Service discovery, Load balancing |
+| **Storage** | Persistent storage, volumes, dynamic provisioning |
+| **Configuration** | ConfigMaps, Secrets, application configuration |
+| **Security** | Authentication, Authorization, Secrets management |
+| **Policies** | PodSecurity, NetworkPolicies, ResourceQuota policies |
+| **Scheduling, Preemption, and Eviction** | Pod scheduling, priorities, eviction mechanisms |
+| **Cluster Administration** | Cluster setup, maintenance, upgrades |
+| **Windows in Kubernetes** | Kubernetes support for Windows nodes |
+| **Extending Kubernetes** | CRDs, APIs, Webhooks, Operator pattern |
+
 
 [Concepts](https://kubernetes.io/docs/concepts/)
 
