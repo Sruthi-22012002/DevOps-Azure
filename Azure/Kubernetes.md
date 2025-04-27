@@ -62,7 +62,7 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
 ## 🔹 Posibilities for setting up a kubernetes cluster
 ### 1. ☁️ Cloud Providers (Managed Kubernetes)
 
-<img src="https://github.com/user-attachments/assets/dd87a94f-6246-433c-a081-198100e7fb54" alt="managed cluster" width="300"/>
+<img src="https://github.com/user-attachments/assets/b456d901-a796-4a6f-b629-9920dc03a7ab" alt="managed cluster" width="400"/>
 
 **Stack:**
 > Hardware → Operating System → Container Runtime → Containers (App + Binaries only, no full OS inside).
@@ -196,6 +196,26 @@ D --> E[Optional: Tear Down Cluster]
     > An agent that runs on every node (master and worker) and ensures the containers are running as expected.
 
   <img src="https://github.com/user-attachments/assets/d1de19e2-8a50-4d5c-b9c9-dabb58f31dfb" alt="kubernetes" width="400"/>
+
+## Benefits of Managed Kubernetes
+
+### Scalability
+The decoupled architectural support of Kubernetes makes it easy to scale containerized applications to meet business requirements.
+
+### Accelerated Deployment
+With managed Kubernetes, teams can spin up a cluster in minutes, with all configuration tasks completed by the Kubernetes vendor.
+
+### Minimized Management
+A managed Kubernetes vendor takes care of all maintenance tasks, keeping the cluster up-to-date and scaling easily.
+
+### Freed Up Developers
+The right managed Kubernetes solution allows developers to focus on generating business value, rather than troubleshooting Kubernetes deployments.
+
+### Predictable Cost
+A managed solution enables IT teams to better predict the monthly cost of running a Kubernetes implementation.
+
+### Improved Security
+Managed Kubernetes providers bring expertise in cloud-based security, helping to protect the expanded attack surface that containers can create.
 
 ## Concepts in kubernetes
 <img src="https://github.com/user-attachments/assets/cbc67283-0ed8-42d2-abad-fe34af772049" alt="kubernetes" width="400"/>
