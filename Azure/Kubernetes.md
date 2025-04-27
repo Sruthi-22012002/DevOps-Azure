@@ -37,6 +37,7 @@ Worker nodes in a cluster are machines or servers running applications, controll
 * Container Runtime, **responsible** for container **execution**, supports multiple runtimes: Docker, containers.
   
 <b>Guide:</b> [Kubernetes](https://k21academy.com/docker-kubernetes/kubernetes-architecture-components-overview-for-beginners/)
+
 <img src="https://github.com/user-attachments/assets/6560832e-a9ae-4453-bade-282bc96bf1c0" alt="managed cluster" width="400"/>
 
 ## How does Kubernetes work?
