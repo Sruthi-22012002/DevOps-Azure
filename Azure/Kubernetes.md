@@ -101,7 +101,15 @@ kubectl apply -f simple-pod.yaml
 
 > In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers.
 
-#### Deployments
+#### 1. ReplicaSet
+* A ReplicaSet ensures that a specified number of pods are running at any given time.
+* It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
+* ReplicaSets provide basic scaling and availability features.
+* Let’s look at the spec field inside.
+    * `.spec.replicas` denotes the number of replicas – the number of instances of the pod you would be running.
+    * `.spec.selector` contains the matchLabels field among others which contains a map of key-value pairs used to match labels on pods.
+    * `.spec.template` contains the pod template that is used to create the replicas. These replicas are then managed by the ReplicaSet.
+#### 2. Deployments
 * Run stateless applications.
 * It is the preferred way to deploy an application inside a pod.
 * It is a higher-level abstraction built on top of ReplicaSets that uses ReplicaSets internally to manage applications.
@@ -112,11 +120,8 @@ kubectl apply -f simple-pod.yaml
         > Deployments automatically rollback to a previous version of an application if an update fails.
     * Version Control
       > Similar to the previous feature, Deployments implement version control, hence allowing for the ability to rollback to a previous specific version.
-#### ReplicaSet
-* A ReplicaSet ensures that a specified number of pods are running at any given time.
-* It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
-* ReplicaSets provide basic scaling and availability features.
-#### StatefulSet
+
+#### 3. StatefulSet
 * StatefulSet is the controller that manages the deployment and scaling of a set of Stateful pods.
 * A stateful pod in Kubernetes is a pod that requires persistent storage and a stable network identity to maintain its state all the time, even during pod restarts or rescheduling.
 
