@@ -40,29 +40,26 @@ Worker nodes in a cluster are machines or servers running applications, controll
 
 <p align="center"><img src="https://github.com/user-attachments/assets/6560832e-a9ae-4453-bade-282bc96bf1c0" alt="managed cluster" width="400"/></div>
 
-<div style="border: 2px solid black; padding: 16px; border-radius: 8px;">
+> ## How does Kubernetes work?
+> When you write a YAML file like `deployment.yaml`, you're basically telling Kubernetes, “Hey, I need 3 copies of my app running forever.” This request is received by the Kubernetes master, where several key components work together to make it happen.
+>
+> ### Components of the Workflow:
+>
+> - 🗨️ **Kube-API Server:**  
+>   “Got it! Let me check how many nodes are free.”
+>
+> - 🗨️ **Scheduler:**  
+>   “Okay, I found some free nodes. Let’s get those Pods running.”
+>
+> - 🗨️ **Controller Manager:**  
+>   “I’m on it! I’ll make sure the right number of Pods are always running. If one crashes, I’ll create a new one.”
+>
+> - 🗨️ **Container Runtime:**  
+>   “I'm creating the pod.”
+>
+> - 🗨️ **kubelet:**  
+>   “I’m watching over the Pods on this node and reporting their status back to the master.”
 
-## How does Kubernetes work?
-When you write a YAML file like `deployment.yaml`, you're basically telling Kubernetes, “Hey, I need 3 copies of my app running forever.” This request is received by the Kubernetes master, where several key components work together to make it happen.
-
-### Components of the Workflow:
-
-- 🗨️ **Kube-API Server:**  
-  “Got it! Let me check how many nodes are free.”
-
-- 🗨️ **Scheduler:**  
-  “Okay, I found some free nodes. Let’s get those Pods running.”
-
-- 🗨️ **Controller Manager:**  
-  “I’m on it! I’ll make sure the right number of Pods are always running. If one crashes, I’ll create a new one.”
-
-- 🗨️ **Container Runtime:**  
-  “I'm creating the pod.”
-
-- 🗨️ **kubelet:**  
-  “I’m watching over the Pods on this node and reporting their status back to the master.”
-
-</div>
 
 ### 🧾 Kubernetes workloads
 > A Kubernetes workload is an application that runs on Kubernetes.
