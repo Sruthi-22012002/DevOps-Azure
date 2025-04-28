@@ -94,26 +94,19 @@ spec:
 ```bash
 kubectl apply -f simple-pod.yaml
 ```
-### 🧾 Kubernetes Resource objects
+### 🧾 Kubernetes workloads
+> A Kubernetes workload is an application that runs on Kubernetes.
 
-| **Kind**                      | **Purpose**                                                                 |
-|------------------------------|------------------------------------------------------------------------------|
-| Pod                        | The smallest unit — runs one or more containers.                            |
-| Deployment                 | Manages a set of Pods — scaling, updating, and healing automatically.       |
-| ReplicaSet                 | Ensures a certain number of Pod replicas are running. Used by Deployments.  |
-| StatefulSet                | Like Deployment, but for **stateful apps** (e.g., databases).               |
-| DaemonSet                  | Ensures **one Pod per node** (e.g., for log collectors or monitoring).      |
-| Job                        | Runs a task **once** and exits successfully (e.g., batch jobs).             |
-| CronJob                    | Schedules Jobs to run on a **time schedule** (like a Linux cron).           |
-| Service                    | Exposes Pods as a **network service** (ClusterIP, NodePort, LoadBalancer). |
-| Ingress                    | Manages **external access** to Services via HTTP/HTTPS.                     |
-| ConfigMap                  | Stores **non-confidential** config data separately from app code.           |
-| Secret                     | Stores **confidential** data like passwords and API keys.                   |
-| PersistentVolume (PV)      | Represents **storage resources** (e.g., disks).                             |
-| PersistentVolumeClaim (PVC)| Requests storage from a PersistentVolume.                                   |
-| Namespace                  | Provides **isolated environments** within a cluster.                        |
-| Role / ClusterRole         | Defines permissions within a namespace or across the whole cluster.         |
-| RoleBinding / ClusterRoleBinding | Assigns roles to users or services.                                     |
+> A workload can be composed of a single component or multiple components working together, but it must run within a set of pods.
+
+> In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers. 
+#### ReplicaSet
+* A ReplicaSet ensures that a specified number of pods are running at any given time.
+* It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
+* ReplicaSets provide basic scaling and availability features.
+#### StatefulSet
+* StatefulSet is the controller that manages the deployment and scaling of a set of Stateful pods.
+* A stateful pod in Kubernetes is a pod that requires persistent storage and a stable network identity to maintain its state all the time, even during pod restarts or rescheduling.
 
 ### 2. 🖥️ Local Kubernetes (For Development/Testing)
 #### 🛠️ Tools:
