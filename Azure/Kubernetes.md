@@ -40,6 +40,8 @@ Worker nodes in a cluster are machines or servers running applications, controll
 
 <p align="center"><img src="https://github.com/user-attachments/assets/6560832e-a9ae-4453-bade-282bc96bf1c0" alt="managed cluster" width="400"/></div>
 
+<div style="border: 2px solid black; padding: 16px; border-radius: 8px;">
+
 ## How does Kubernetes work?
 When you write a YAML file like `deployment.yaml`, you're basically telling Kubernetes, “Hey, I need 3 copies of my app running forever.” This request is received by the Kubernetes master, where several key components work together to make it happen.
 
@@ -58,7 +60,40 @@ When you write a YAML file like `deployment.yaml`, you're basically telling Kube
   “I'm creating the pod.”
 
 - 🗨️ **kubelet:**  
-  “I’m watching over the Pods on this node and reporting their status back to the master
+  “I’m watching over the Pods on this node and reporting their status back to the master.”
+
+</div>
+
+### 🧾 Kubernetes workloads
+> A Kubernetes workload is an application that runs on Kubernetes.
+
+> A workload can be composed of a single component or multiple components working together, but it must run within a set of pods.
+
+> In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers.
+
+#### 1. ReplicaSet
+* A ReplicaSet ensures that a specified number of pods are running at any given time.
+* It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
+* ReplicaSets provide basic scaling and availability features.
+* Let’s look at the spec field inside.
+    * `.spec.replicas` denotes the number of replicas – the number of instances of the pod you would be running.
+    * `.spec.selector` contains the matchLabels field among others which contains a map of key-value pairs used to match labels on pods.
+    * `.spec.template` contains the pod template that is used to create the replicas. These replicas are then managed by the ReplicaSet.
+#### 2. Deployments
+* Run stateless applications.
+* It is the preferred way to deploy an application inside a pod.
+* It is a higher-level abstraction built on top of ReplicaSets that uses ReplicaSets internally to manage applications.
+* In addition to the work carried out by a ReplicaSet, it provides added functionality such as:
+    * Rolling Updates
+        > Rolling updates ensure that an application is updated gradually, one replica at a time, while ensuring that the overall availability of the application is not impacted.
+    * Rollback
+        > Deployments automatically rollback to a previous version of an application if an update fails.
+    * Version Control
+      > Similar to the previous feature, Deployments implement version control, hence allowing for the ability to rollback to a previous specific version.
+
+#### 3. StatefulSet
+* StatefulSet is the controller that manages the deployment and scaling of a set of Stateful pods.
+* A stateful pod in Kubernetes is a pod that requires persistent storage and a stable network identity to maintain its state all the time, even during pod restarts or rescheduling.
   
 ## 🔹 Posibilities for setting up a kubernetes cluster
 ### 1. ☁️ Cloud Providers (Managed Kubernetes)
@@ -94,37 +129,6 @@ spec:
 ```bash
 kubectl apply -f simple-pod.yaml
 ```
-### 🧾 Kubernetes workloads
-> A Kubernetes workload is an application that runs on Kubernetes.
-
-> A workload can be composed of a single component or multiple components working together, but it must run within a set of pods.
-
-> In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers.
-
-#### 1. ReplicaSet
-* A ReplicaSet ensures that a specified number of pods are running at any given time.
-* It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
-* ReplicaSets provide basic scaling and availability features.
-* Let’s look at the spec field inside.
-    * `.spec.replicas` denotes the number of replicas – the number of instances of the pod you would be running.
-    * `.spec.selector` contains the matchLabels field among others which contains a map of key-value pairs used to match labels on pods.
-    * `.spec.template` contains the pod template that is used to create the replicas. These replicas are then managed by the ReplicaSet.
-#### 2. Deployments
-* Run stateless applications.
-* It is the preferred way to deploy an application inside a pod.
-* It is a higher-level abstraction built on top of ReplicaSets that uses ReplicaSets internally to manage applications.
-* In addition to the work carried out by a ReplicaSet, it provides added functionality such as:
-    * Rolling Updates
-        > Rolling updates ensure that an application is updated gradually, one replica at a time, while ensuring that the overall availability of the application is not impacted.
-    * Rollback
-        > Deployments automatically rollback to a previous version of an application if an update fails.
-    * Version Control
-      > Similar to the previous feature, Deployments implement version control, hence allowing for the ability to rollback to a previous specific version.
-
-#### 3. StatefulSet
-* StatefulSet is the controller that manages the deployment and scaling of a set of Stateful pods.
-* A stateful pod in Kubernetes is a pod that requires persistent storage and a stable network identity to maintain its state all the time, even during pod restarts or rescheduling.
-
 ### 2. 🖥️ Local Kubernetes (For Development/Testing)
 #### 🛠️ Tools:
 * **Minikube – Single-node cluster**
