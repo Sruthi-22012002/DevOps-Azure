@@ -99,7 +99,19 @@ kubectl apply -f simple-pod.yaml
 
 > A workload can be composed of a single component or multiple components working together, but it must run within a set of pods.
 
-> In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers. 
+> In Kubernetes, each pod has a defined lifecycle, and it represents a collection of running containers.
+
+#### Deployments
+* Run stateless applications.
+* It is the preferred way to deploy an application inside a pod.
+* It is a higher-level abstraction built on top of ReplicaSets that uses ReplicaSets internally to manage applications.
+* In addition to the work carried out by a ReplicaSet, it provides added functionality such as:
+    * Rolling Updates
+        > Rolling updates ensure that an application is updated gradually, one replica at a time, while ensuring that the overall availability of the application is not impacted.
+    * Rollback
+        > Deployments automatically rollback to a previous version of an application if an update fails.
+    * Version Control
+      > Similar to the previous feature, Deployments implement version control, hence allowing for the ability to rollback to a previous specific version.
 #### ReplicaSet
 * A ReplicaSet ensures that a specified number of pods are running at any given time.
 * It acts as a self-healing mechanism, automatically replacing failed or deleted pods.
