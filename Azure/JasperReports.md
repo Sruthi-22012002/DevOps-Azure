@@ -12,6 +12,8 @@
  * Interact with reports, including sorting, changing formatting, entering parameters, and drilling on data.
  * Schedule reports for distribution through email and storage in the repository.
  * Combine reports and visual elements to create interactive dashboards that clearly show business trends.
+## Architecture diagram
+![image](https://github.com/user-attachments/assets/700e4640-803a-4b2d-ada1-3e49c5d5291d)
 
 ## JasperReports Server Distributions
 > JasperReports Server is a web application that runs in an app server and uses an external database to store its repository.
@@ -45,5 +47,39 @@ JasperReports Server is available in two distributions: a **binary installer** f
 
  * **Split installation:** Only the Repository tables are created in the repository database. The Audit, Access, and Monitoring tables are created in a separate audit database.
 > The binaryinstaller does not support split installation. For split installation, use the stand-alone WAR file distribution, which is the official JasperReports Server installer
+
+##  The Setup
+> We are setting up JasperReports Server (Java-based Business Intelligence tool) on Azure Kubernetes Service (AKS) using the WAR file distribution. This means:
+
+* The application will be containerized using Docker (Tomcat + WAR).
+* It will be deployed into a Kubernetes cluster (AKS).
+* A persistent database (e.g., Azure Database for PostgreSQL) will store metadata and repository data.
+* Access to the server will be exposed using Ingress Controller or LoadBalancer.
+* Kubernetes PersistentVolumeClaims will be used to retain logs and repository content.
+
+##  Tools Required
+* Docker: To build and test container images.
+* kubectl: To interact with the AKS cluster.
+* Azure Kubernetes Service (AKS)
+* Azure Container Registry (ACR)
+* Azure Database for PostgreSQL / MySQL
+* Azure Files or Disks for persistent storage
+
+## Pre-requities
+### Azure Setup
+* Active Azure subscription
+* AKS cluster created and running
+* ACR linked to AKS (for pulling images)
+* Azure PostgreSQL/MySQL server (with firewall rules set)
+### JasperReports Assets
+* jasperserver.war (from TIBCO)
+* JDBC Driver (PostgreSQL or MySQL) to be included in image
+* Configuration files (like applicationContext.xml)
+### Kubernetes Resources
+* Deployment YAML for JasperReports
+* Service (NodePort or LoadBalancer)
+* Ingress config (optional, with TLS for HTTPS)
+* PVCs for repository and logs
+* Secrets for database credentials
 
 
