@@ -46,3 +46,4 @@ JasperReports Server is available in two distributions: a **binary installer** f
  * **Split installation:** Only the Repository tables are created in the repository database. The Audit, Access, and Monitoring tables are created in a separate audit database.
 > The binaryinstaller does not support split installation. For split installation, use the stand-alone WAR file distribution, which is the official JasperReports Server installer
 
+
