@@ -208,6 +208,7 @@ spec:
 kubectl apply -f jasper-deployment.yaml
 ```
 ## Step 6: Check pods are in running state and service
+<p align="center"><img src="https://github.com/user-attachments/assets/a4e2c215-4cd1-4a59-b8c4-4c9ac35dab9d" alt="managed cluster" width="400"/></div>
 
 
 ## Commands use to Create and access jasperreport server
@@ -242,7 +243,7 @@ minikube service jasperreports
 ```
 <p align="center"><img src="https://github.com/user-attachments/assets/e9db740b-6a84-4f6f-b62b-1a0dea0752b2" alt="managed cluster" width="400"/></div>
 
-## page redirects to : 
+#### page redirects to : 
 
 <p align="center"><img src="https://github.com/user-attachments/assets/c646288b-b634-483b-9c44-72f24348388f" alt="managed cluster" width="400"/></div>
 
