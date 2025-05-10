@@ -13,7 +13,7 @@
  * Schedule reports for distribution through email and storage in the repository.
  * Combine reports and visual elements to create interactive dashboards that clearly show business trends.
 ## Architecture diagram
-![image](https://github.com/user-attachments/assets/700e4640-803a-4b2d-ada1-3e49c5d5291d)
+<p align="center"><img src="https://github.com/user-attachments/assets/700e4640-803a-4b2d-ada1-3e49c5d5291d" alt="managed cluster" width="400"/></div>
 
 ## JasperReports Server Distributions
 > JasperReports Server is a web application that runs in an app server and uses an external database to store its repository.
@@ -33,12 +33,12 @@ JasperReports Server is available in two distributions: a **binary installer** f
 #### Download 
 [Jaspersoft](https://www.jaspersoft.com/support) -> Products -> community edition -> Download Now
 
-![image](https://github.com/user-attachments/assets/3c96649e-f0fb-4d3b-8a93-439a5c732fd1)
+<p align="center"><img src="https://github.com/user-attachments/assets/3c96649e-f0fb-4d3b-8a93-439a5c732fd1" alt="managed cluster" width="400"/></div>
 
 ## System Requirements
  The following table contains the minimum and recommended resources for a full installation that includes PostgreSQL and an application server.
  
- ![image](https://github.com/user-attachments/assets/70f26645-eb22-46d0-8c05-7390c6748b63)
+ <p align="center"><img src="https://github.com/user-attachments/assets/70f26645-eb22-46d0-8c05-7390c6748b63" alt="managed cluster" width="400"/></div>
 
 ##  Installation Types
  As of version 8.0, JasperReports Server supports the following installations:
@@ -209,9 +209,6 @@ kubectl apply -f jasper-deployment.yaml
 ```
 ## Step 6: Check pods are in running state and service
 
-![image](https://github.com/user-attachments/assets/63db211f-2402-453c-b99a-dd779f694391)
-
-![image](https://github.com/user-attachments/assets/8f1b76ac-0790-450f-92b6-cbdd97f46019)
 
 ## Commands use to Create and access jasperreport server
 > list all the services
@@ -243,11 +240,11 @@ http://<minikube-ip>:30080
 ```
 minikube service jasperreports
 ```
-![image](https://github.com/user-attachments/assets/e9db740b-6a84-4f6f-b62b-1a0dea0752b2)
+<p align="center"><img src="https://github.com/user-attachments/assets/e9db740b-6a84-4f6f-b62b-1a0dea0752b2" alt="managed cluster" width="400"/></div>
 
 ## page redirects to : 
 
-![Uploading image.png…]()
+<p align="center"><img src="https://github.com/user-attachments/assets/c646288b-b634-483b-9c44-72f24348388f" alt="managed cluster" width="400"/></div>
 
 3.Log in with:
 
@@ -255,6 +252,6 @@ minikube service jasperreports
 
    - Password: jasperadmin
 
-![image](https://github.com/user-attachments/assets/3984e0e9-dafb-418d-892b-481501a229d6)
+<p align="center"><img src="https://github.com/user-attachments/assets/3984e0e9-dafb-418d-892b-481501a229d6" alt="managed cluster" width="400"/></div>
 
 
