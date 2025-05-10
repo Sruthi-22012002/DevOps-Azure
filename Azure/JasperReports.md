@@ -209,8 +209,27 @@ kubectl apply -f jasper-deployment.yaml
 ```
 ## Step 6: Check pods are in running state and service
 
-![image](https://github.com/user-attachments/assets/4dab492b-211e-40bd-9fda-c276fb2faae9)
+![image](https://github.com/user-attachments/assets/63db211f-2402-453c-b99a-dd779f694391)
 
+![image](https://github.com/user-attachments/assets/8f1b76ac-0790-450f-92b6-cbdd97f46019)
+
+## Commands use to Create and access jasperreport server
+> list all the services
+```
+kubectl get svc
+```
+> Describe the services
+```
+kubectl describe svc jasperreports
+```
+> Status of minikube
+```
+minikube status
+```
+> watch your pods in real time.
+```
+kubectl get pods -w
+```
 ## Step 7:Access JasperReports in Browser
 
 1.Get the IP:
