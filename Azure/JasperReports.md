@@ -293,7 +293,65 @@ minikube service jasperreports
 
 <p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="400"/></div>
 
+##### Create a table in WSL
+**Step 1:** check the version of PostgreSQl
 
+```
+psql --version
+```
+If command not found, install postgreSQL :
+```
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
+**Step 2:** Create a table 
+> Login with default postgreSQL
+```
+sudo -u postgres psql
+```
 
+> Create a new role
+```
+CREATE ROLE sruthi WITH LOGIN PASSWORD '0612';
+```
+
+> Create a database
+```
+CREATE DATABASE user_report;
+```
+
+> Change ownership
+```
+ALTER DATABASE user_report OWNER TO sruthi;
+```
+
+> Login into owner
+```
+sudo -u sruthi psql -d user_report
+```
+
+> Create table
+```
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
+INSERT INTO users (id, name, email) VALUES
+(1, 'Gunasekaran', 'Gunaseakaran@gmail.com'),
+(2, 'kavitha', 'kaviguna2025@gmail.com'),
+(3, 'Sanjay', 'sanjayvg06@gmail.com'),
+(4, 'Sruthi', 'sruthivg78@gmail.com');
+```
+> Verify data
+```
+SELECT * FROM users;
+```
+<p align="center"><img src="https://github.com/user-attachments/assets/feb93865-9c7c-4b1a-ba2f-07d114a3d02a" alt="managed cluster" width="400"/></div>
+
+> Exit
+```
+\q
+```
 
 
