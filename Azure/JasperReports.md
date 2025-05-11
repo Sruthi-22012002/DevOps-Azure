@@ -13,7 +13,7 @@
  * Schedule reports for distribution through email and storage in the repository.
  * Combine reports and visual elements to create interactive dashboards that clearly show business trends.
 ## Architecture diagram
-<p align="center"><img src="https://github.com/user-attachments/assets/700e4640-803a-4b2d-ada1-3e49c5d5291d" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/700e4640-803a-4b2d-ada1-3e49c5d5291d" alt="managed cluster" width="500"/></div>
 
 ## JasperReports Server Distributions
 > JasperReports Server is a web application that runs in an app server and uses an external database to store its repository.
@@ -33,12 +33,12 @@ JasperReports Server is available in two distributions: a **binary installer** f
 #### Download 
 [Jaspersoft](https://www.jaspersoft.com/support) -> Products -> community edition -> Download Now
 
-<p align="center"><img src="https://github.com/user-attachments/assets/3c96649e-f0fb-4d3b-8a93-439a5c732fd1" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/3c96649e-f0fb-4d3b-8a93-439a5c732fd1" alt="managed cluster" width="500"/></div>
 
 ## System Requirements
  The following table contains the minimum and recommended resources for a full installation that includes PostgreSQL and an application server.
  
- <p align="center"><img src="https://github.com/user-attachments/assets/70f26645-eb22-46d0-8c05-7390c6748b63" alt="managed cluster" width="400"/></div>
+ <p align="center"><img src="https://github.com/user-attachments/assets/70f26645-eb22-46d0-8c05-7390c6748b63" alt="managed cluster" width="500"/></div>
 
 ##  Installation Types
  As of version 8.0, JasperReports Server supports the following installations:
@@ -208,7 +208,7 @@ spec:
 kubectl apply -f jasper-deployment.yaml
 ```
 ## Step 6: Check pods are in running state and service
-<p align="center"><img src="https://github.com/user-attachments/assets/a4e2c215-4cd1-4a59-b8c4-4c9ac35dab9d" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/a4e2c215-4cd1-4a59-b8c4-4c9ac35dab9d" alt="managed cluster" width="500"/></div>
 
 
 ## Commands use to Create and access jasperreport server
@@ -241,11 +241,11 @@ http://<minikube-ip>:30080
 ```
 minikube service jasperreports
 ```
-<p align="center"><img src="https://github.com/user-attachments/assets/e9db740b-6a84-4f6f-b62b-1a0dea0752b2" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/e9db740b-6a84-4f6f-b62b-1a0dea0752b2" alt="managed cluster" width="500"/></div>
 
 #### page redirects to : 
 
-<p align="center"><img src="https://github.com/user-attachments/assets/c646288b-b634-483b-9c44-72f24348388f" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/c646288b-b634-483b-9c44-72f24348388f" alt="managed cluster" width="500"/></div>
 
 3.Log in with:
 
@@ -253,21 +253,21 @@ minikube service jasperreports
 
    - Password: jasperadmin
 
-<p align="center"><img src="https://github.com/user-attachments/assets/3984e0e9-dafb-418d-892b-481501a229d6" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/3984e0e9-dafb-418d-892b-481501a229d6" alt="managed cluster" width="500"/></div>
 
 ## Create a report 
 
 **Step 1:** Clcik views -> Repository
 
-<p align="center"><img src="https://github.com/user-attachments/assets/2ad5f033-0561-4def-bdd4-5d6975af05de" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/2ad5f033-0561-4def-bdd4-5d6975af05de" alt="managed cluster" width="500"/></div>
 
 **Step 2:** Right click the `root ` folder and click `Add folder`
 
-<p align="center"><img src="https://github.com/user-attachments/assets/89b7a77e-e81f-44d8-bf7d-5026f39f7efc" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/89b7a77e-e81f-44d8-bf7d-5026f39f7efc" alt="managed cluster" width="500"/></div>
 
 **Step 3:** Enter a folder name and click `Add`
 
-<p align="center"><img src="https://github.com/user-attachments/assets/011cd90f-28aa-4f85-8f64-558b577cd4dd" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/011cd90f-28aa-4f85-8f64-558b577cd4dd" alt="managed cluster" width="500"/></div>
 
 **Step 4:** Create a Jasperreport
 
@@ -275,11 +275,11 @@ minikube service jasperreports
 > Select `Add resource`
 > choose `Jasperreport`
 
-<p align="center"><img src="https://github.com/user-attachments/assets/e1649f7f-b087-4e41-85bd-8b026e10bfa4" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/e1649f7f-b087-4e41-85bd-8b026e10bfa4" alt="managed cluster" width="500"/></div>
 
 **Step 5:** 
 #### Set up the report
-<p align="center"><img src="https://github.com/user-attachments/assets/afbf40d8-87a6-4495-888e-098014d627c2" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/afbf40d8-87a6-4495-888e-098014d627c2" alt="managed cluster" width="500"/></div>
 
 > Enter the name and Resource ID (will be taken automatically)
 > Locate the JRXML File : `Upload a local machine`
@@ -287,11 +287,11 @@ minikube service jasperreports
 
 #### Data source
 
-<p align="center"><img src="https://github.com/user-attachments/assets/bad7da52-4aa8-4a24-9419-226b210dbcbb" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/bad7da52-4aa8-4a24-9419-226b210dbcbb" alt="managed cluster" width="500"/></div>
 
 > Click to create a new data source
 
-<p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="500"/></div>
 
 ##### Create a table in WSL
 **Step 1:** check the version of PostgreSQl
@@ -347,7 +347,7 @@ INSERT INTO users (id, name, email) VALUES
 ```
 SELECT * FROM users;
 ```
-<p align="center"><img src="https://github.com/user-attachments/assets/feb93865-9c7c-4b1a-ba2f-07d114a3d02a" alt="managed cluster" width="400"/></div>
+<p align="center"><img src="https://github.com/user-attachments/assets/feb93865-9c7c-4b1a-ba2f-07d114a3d02a" alt="managed cluster" width="500"/></div>
 
 > Exit
 ```
