@@ -257,6 +257,43 @@ minikube service jasperreports
 
 ## Create a report 
 
+**Step 1:** Clcik views -> Repository
+
+<p align="center"><img src="https://github.com/user-attachments/assets/2ad5f033-0561-4def-bdd4-5d6975af05de" alt="managed cluster" width="400"/></div>
+
+**Step 2:** Right click the `root ` folder and click `Add folder`
+
+<p align="center"><img src="https://github.com/user-attachments/assets/89b7a77e-e81f-44d8-bf7d-5026f39f7efc" alt="managed cluster" width="400"/></div>
+
+**Step 3:** Enter a folder name and click `Add`
+
+<p align="center"><img src="https://github.com/user-attachments/assets/011cd90f-28aa-4f85-8f64-558b577cd4dd" alt="managed cluster" width="400"/></div>
+
+**Step 4:** Create a Jasperreport
+
+> Right click the added folder
+> Select `Add resource`
+> choose `Jasperreport`
+
+<p align="center"><img src="https://github.com/user-attachments/assets/e1649f7f-b087-4e41-85bd-8b026e10bfa4" alt="managed cluster" width="400"/></div>
+
+**Step 5:** 
+#### Set up the report
+<p align="center"><img src="https://github.com/user-attachments/assets/afbf40d8-87a6-4495-888e-098014d627c2" alt="managed cluster" width="400"/></div>
+
+> Enter the name and Resource ID (will be taken automatically)
+> Locate the JRXML File : `Upload a local machine`
+**upload .jrxml** 
+
+#### Data source
+
+<p align="center"><img src="https://github.com/user-attachments/assets/bad7da52-4aa8-4a24-9419-226b210dbcbb" alt="managed cluster" width="400"/></div>
+
+> Click to create a new data source
+
+<p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="400"/></div>
+
+
 
 
 
