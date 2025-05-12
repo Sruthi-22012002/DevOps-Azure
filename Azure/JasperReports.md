@@ -152,19 +152,6 @@ kubectl apply -f postgres-deployment.yaml
 nano jasper-deployment.yaml
 ```
 ```
-apiVersion: v1
-kind: Service
-metadata:
-  name: jasperreports
-spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30080
-  selector:
-    app: jasperreports
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -201,7 +188,6 @@ spec:
               value: jasperadmin
             - name: JASPERREPORTS_PASSWORD
               value: jasperadmin
-
 ```
 2. Apply it:
 ```
