@@ -449,5 +449,12 @@ SELECT * FROM users;
 > Submit and run the report
 <p align="center"><img src="https://github.com/user-attachments/assets/6f23b03a-76b4-42de-92db-4ea5f415fb5f" alt="managed cluster" width="500"/></div>
 
+#### Insert a new data
+<p align="center"><img src="https://github.com/user-attachments/assets/925b5bc2-af9e-46f2-bd26-76e73e512f16" alt="managed cluster" width="500"/></div>
+
+> It will update automatically in report
+<p align="center"><img src="https://github.com/user-attachments/assets/5fba65de-bbef-4594-a12e-4e8aef0fb8e1" alt="managed cluster" width="500"/></div>
+
+
 
 
