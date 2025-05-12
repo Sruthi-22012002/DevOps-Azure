@@ -282,8 +282,11 @@ minikube service jasperreports
 <p align="center"><img src="https://github.com/user-attachments/assets/afbf40d8-87a6-4495-888e-098014d627c2" alt="managed cluster" width="500"/></div>
 
 > Enter the name and Resource ID (will be taken automatically)
+
 > Locate the JRXML File : `Upload a local machine`
+
 **upload .jrxml**
+
 > .jrxml file
 ```
 <?xml version="1.0" encoding="UTF-8"?>
