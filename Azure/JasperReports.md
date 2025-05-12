@@ -289,10 +289,7 @@ minikube service jasperreports
 
 <p align="center"><img src="https://github.com/user-attachments/assets/bad7da52-4aa8-4a24-9419-226b210dbcbb" alt="managed cluster" width="500"/></div>
 
-> Click to create a new data source
-
-<p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="500"/></div>
-
+> Before that create a table in postgresql
 ##### Create a table in WSL
 **Step 1:** check the version of PostgreSQl
 
@@ -353,5 +350,42 @@ SELECT * FROM users;
 ```
 \q
 ```
+### (or)
+
+- In terminal
+
+```
+kubectl exec -it <postgres-pod-name> -- psql -U jasper -d jasperdb
+```
+> Create table
+```
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
+INSERT INTO users (id, name, email) VALUES
+(1, 'Gunasekaran', 'Gunaseakaran@gmail.com'),
+(2, 'kavitha', 'kaviguna2025@gmail.com'),
+(3, 'Sanjay', 'sanjayvg06@gmail.com'),
+(4, 'Sruthi', 'sruthivg78@gmail.com');
+```
+> Verify data
+```
+SELECT * FROM users;
+```
+> Enter the dbname, username, password as you mentioned in postgres-deployment.yaml file
+
+**Step 3** Create a Data source in Jasperreport
+> Click to create a new data source
+<p align="center"><img src="https://github.com/user-attachments/assets/6ab46f0b-2917-44fa-a343-9202629d38fd" alt="managed cluster" width="500"/></div>
+
+ > Test the connection and  `add`
+<p align="center"><img src="https://github.com/user-attachments/assets/82184a9d-f885-445e-bc99-9466ded6bfaf" alt="managed cluster" width="500"/></div>
+
+#### Submit the report
+> Submit and run the report
+<p align="center"><img src="https://github.com/user-attachments/assets/6f23b03a-76b4-42de-92db-4ea5f415fb5f" alt="managed cluster" width="500"/></div>
+
 
 
