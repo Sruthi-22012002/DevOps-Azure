@@ -347,3 +347,126 @@ kubectl get deployments
 > output : NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 nginx-deployment   3/3     3            3           19s
 
+## Deploy III-tier application in aks
+**Step 1:** Create a Dockerfile for base image
+```
+ FROM node:16 AS build
+
+     WORKDIR /app
+
+
+     COPY package.json package-lock.json ./
+    RUN npm config set timeout 600000 \
+    && npm config set registry https://registry.npmmirror.com \
+   && npm config set strict-ssl false
+
+ COPY . .
+ RUN npm install --offline || npm install --legacy-peer-deps --force
+
+ RUN npm run build
+
+ FROM nginx:alpine
+ COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+**Step 2** Create a `docker-compose.yml ` in `.githb/workflows ` folder
+```
+name: Build & Push image to ACR
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # Login to Azure using OIDC authentication
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+    # Login to Azure Container Registry (ACR)
+    - name: Login to Azure Container Registry (ACR)
+      run: |
+        echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login ${{ secrets.ACR_NAME }}.azurecr.io -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
+
+    # Build and Push Frontend Image
+    - name: Build and Push Frontend
+      run: |
+        docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/frontend:latest ./react-hooks-frontend
+        docker push ${{ secrets.ACR_NAME }}.azurecr.io/frontend:latest
+
+    # Build and Push Backend Image with Database Secrets
+    - name: Build and Push Backend
+      run: |
+        docker build \
+          --build-arg DB_HOST=${{ secrets.DB_HOST }} \
+          --build-arg DB_PORT=${{ secrets.DB_PORT }} \
+          --build-arg DB_USER=${{ secrets.DB_USER }} \
+          --build-arg DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+          --build-arg DB_NAME=${{ secrets.DB_NAME }} \
+          -t ${{ secrets.ACR_NAME }}.azurecr.io/backend:latest ./springboot-backend
+
+        docker push ${{ secrets.ACR_NAME }}.azurecr.io/backend:latest
+```
+**Step 3:** Create `frontend-deployment.yaml`
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: <your-acr-name>.azurecr.io/frontend:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+```
+**Step 4:** Merge aks cluster and ACR in CLI
+```
+az aks update -n namespacecluster -g portfolio --attach-acr akscontainerregistry22
+```
+**Step 5:** Verify the pod running
+<p align="center"><img src="https://github.com/user-attachments/assets/2a778467-a209-4587-a0c9-770afea75dd2" alt="managed cluster" width="400"/></div>
+
+**Step 6:** Run the application
+<p align="center"><img src="https://github.com/user-attachments/assets/32bddee9-0b4a-49cd-af7f-f79428b25a4d" alt="managed cluster" width="400"/></div>
+
+<p align="center"><img src="https://github.com/user-attachments/assets/d79c4fa1-057a-413b-b249-512b777e9e1c" alt="managed cluster" width="400"/></div>
+
+
+
