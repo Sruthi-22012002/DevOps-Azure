@@ -456,6 +456,83 @@ spec:
     - port: 80
       targetPort: 80
 ```
+
+`backen-deployment.yaml`
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: <your-acr-name>.azurecr.io/backend:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_HOST
+              value: "db-service"
+            - name: DB_USER
+              value: "your-db-user"
+            - name: DB_PASS
+              value: "your-db-password"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+    - port: 8080
+      targetPort: 8080
+```
+`db-deployment.yaml`
+```apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "your-db-password"
+            - name: MYSQL_DATABASE
+              value: "your-db-name"
+          ports:
+            - containerPort: 3306
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+```
 **Step 4:** Merge aks cluster and ACR in CLI
 ```
 az aks update -n namespacecluster -g portfolio --attach-acr akscontainerregistry22
