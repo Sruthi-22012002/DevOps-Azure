@@ -61,13 +61,13 @@
   <tr>
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/container-app-automated.md">12.2. Container App Automated</a></td>
   </tr>
-   <tr>
-    <td>14.</td>
-    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/storage.md">Storage</a></td>
-  </tr>
     <tr>
     <td>13.</td>
     <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/kubernetes.md">Kubernetes</a></td>
+  </tr>
+   <tr>
+    <td>14.</td>
+    <td><a href="https://github.com/Sruthi-22012002/DevOps-Azure/blob/main/Azure/RBAC.md">RBAC</a></td>
   </tr>
 </table>
 </div>
