@@ -14,7 +14,7 @@ Process3 --> Process4[Develop the application with bussiness logic]
 Process2 --> Process5[Operation]
 Process5 --> Process6[place the app to the server]
 ```
-# DevOps Learning & Project Guide
+## DevOps Learning & Project Guide
 
 This document covers foundational DevOps knowledge and a practical EMS Ops 3-tier application deployment task on Azure.
 
@@ -55,8 +55,6 @@ This document covers foundational DevOps knowledge and a practical EMS Ops 3-tie
 - Automate tasks
 
 ### Scheduling with Cron
-# CRONTAB – Linux
-
 ## What is Crontab?
 
 Crontab helps you **automate tasks** by scheduling jobs to run at specific times.  
